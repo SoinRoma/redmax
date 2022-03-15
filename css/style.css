@@ -46,7 +46,18 @@ body{
     height: 100vh;
     background: url("../images/backgrounds/mainBg.png") no-repeat;
     background-size: cover;
+    background-position: bottom;
 }
+
+
+.LogoElement{
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    left: -7%;
+}
+
 
 .mainBlock{
     margin-top: 30vh;
@@ -268,4 +279,49 @@ body{
     font-size: 15px;
     line-height: 26px;
     color: #555555;
+}
+
+/*-----------STAT-----------*/
+
+.stat{
+    margin-top: 150px;
+    background: url("../images/backgrounds/statBg.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-row{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1050px;
+    padding-top: 150px;
+    padding-bottom: 180px;
+}
+
+
+.stat-number{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 65px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.stat-title{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.LogoStat{
+    position: absolute;
+    top: 0;
+    right: 3%;
 }

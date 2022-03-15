@@ -171,8 +171,22 @@
     </div>
 </section>
 
-<section class="stat container">
-
+<section class="stat">
+    <div class="stat-row container">
+        <div class="stat-item">
+            <div class="stat-number "><span class="counter1">89</span> %</div>
+            <div class="stat-title">Clients back to us</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number counter"><span class="counter2">100.000</span>+</div>
+            <div class="stat-title">Loads per day</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number counter">$<span class="counter3">700</span>K+</div>
+            <div class="stat-title">Earned for our clients</div>
+        </div>
+    </div>
+    <img src="images/svg/LogoStat.svg" alt="LogoStat" class="LogoStat">
 </section>
 
 <section class="contact container">
@@ -185,6 +199,23 @@
 
 <script src="js/bootstrap/bootstrap.js"></script>
 <script src="js/bootstrap/popper.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script>
+    $('.counter1').counterUp({
+        delay: 10,
+        time: 1000
+    });
+    $('.counter2').counterUp({
+        delay: 10,
+        time: 1000
+    });
+    $('.counter3').counterUp({
+        delay: 10,
+        time: 1000
+    });
+</script>
 </body>
 </html>
 

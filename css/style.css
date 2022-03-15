@@ -198,3 +198,74 @@ body{
     color: #555555;
     padding: 0 40px;
 }
+
+/*-----------WHY--------------*/
+
+.why{
+    margin-top: 150px;
+}
+
+.whyTitle{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-right: 20px;
+}
+
+.why-arrow{
+    transform: rotate(180deg);
+}
+
+.blockLineReverse{
+    display: flex;
+    position: absolute!important;
+    right: 0;
+    width: 90%;
+    margin-top: 22px;
+    align-items: center;
+}
+
+.lineReverse{
+    height: 2px;
+    width: 100%;
+    background: #000000;
+}
+
+.lineArrowReverse{
+    position: absolute;
+    left: -7px;
+}
+
+.whyContent{
+    margin-top: 90px;
+}
+
+.why-item{
+    display: flex;
+    align-items: start;
+    margin-right: 70px;
+}
+
+.whyText{
+    margin-left: 30px;
+    max-width: 440px;
+}
+
+.why-subtitle{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.why-description{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #555555;
+}

@@ -1,0 +1,200 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FBFBFB;
+}
+
+.container{
+    max-width: 1280px;
+    width: 90%;
+}
+
+/*------HEADER---------*/
+
+.header{
+    padding-top: 30px;
+}
+
+.nav-item{
+    list-style-type: none;
+}
+
+.nav-link{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    letter-spacing: 1px;
+}
+
+.nav-button{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    padding: 16px 58px;
+    background-color: transparent;
+    border: 1px solid #FF0000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*--------MAIN---------*/
+
+.main{
+    height: 100vh;
+    background: url("../images/backgrounds/mainBg.png") no-repeat;
+    background-size: cover;
+}
+
+.mainBlock{
+    margin-top: 30vh;
+}
+
+.mainText{
+    margin: auto;
+    max-width: 600px;
+}
+
+.mainDescription{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #555555;
+    max-width: 400px;
+}
+
+.mainButtonLearnMore{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #FF0000;
+    border-radius: 5px;
+    padding: 15px 48px;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.mainButtonContactUs{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #000000;
+    background: transparent;
+    border-radius: 5px;
+    padding: 15px 48px;
+    border: 1px solid #FF0000;
+    cursor: pointer;
+}
+
+
+/*-----------ABOUT-------------*/
+
+.about{
+    margin-top: 6%;
+}
+
+.aboutTitle{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.blockLine{
+    display: flex;
+    position: absolute!important;
+    left: 0;
+    width: 89%;
+    margin-top: 22px;
+    align-items: center;
+}
+
+.line{
+    height: 2px;
+    width: 100%;
+    background: #000000;
+}
+
+.lineArrow{
+    position: absolute;
+    right: -7px;
+}
+
+.aboutContent{
+    display: flex;
+    margin-top: 70px;
+}
+
+.about-subtitle{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.aboutDescription{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #555555;
+    max-width: 480px;
+}
+
+.aboutLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.LogoGray{
+    width: 50%;
+}
+
+.aboutImage{
+    width: 48%;
+}
+
+.rowBlock{
+    margin-bottom: 20px;
+}
+
+.box{
+    width: 48%;
+    background-color: #EAE8E8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.aboutBlockTitle{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.aboutBlockText{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    text-align: center;
+    color: #555555;
+    padding: 0 40px;
+}

@@ -190,11 +190,85 @@
 </section>
 
 <section class="contact container">
-
+    <div class="contactContent">
+        <div class="contactLeft col-6">
+            <h2 class="contactTitle">Interested?</h2>
+            <p class="contactText">
+                Please let us know the nature of your inquiry
+                and we will get back to you shortly
+            </p>
+            <form action="#" class="contactForm">
+                <div class="group">
+                    <input type="text" id="name" required autocomplete="off">
+                    <label for="name">Your name</label>
+                </div>
+                <div class="group">
+                    <input type="text" id="phone" required autocomplete="off">
+                    <label for="phone">Phone number</label>
+                </div>
+                <div class="group">
+                    <input type="text" id="message" required autocomplete="off">
+                    <label for="message">Write message...</label>
+                </div>
+                <button class="contactButton">
+                    Submit
+                </button>
+            </form>
+        </div>
+        <div class="contactRight col-6">
+            <img src="images/img/contat.png" alt="contat">
+        </div>
+    </div>
+    <div class="blockLine contactLine">
+        <span class="line"></span>
+        <img src="images/svg/lineArrow.svg" alt="lineArrow" class="lineArrow">
+    </div>
 </section>
 
-<footer class="footer container">
-
+<footer class="footer">
+    <div class="footer-row container">
+        <div class="first-footer">
+            <img src="images/logos/logo.svg" alt="logo">
+            <p class="footer-license">
+                Redmax Logistics, LLC,
+                © All rights reserved, Last Modified 2022
+            </p>
+        </div>
+        <div class="second-footer">
+            <h2 class="footer-title">
+                Newsletter
+            </h2>
+            <p class="footer-text">
+                We care about our clients. Therefore, we frequently
+                send out news and updates that will help you
+            </p>
+            <div class="group position-relative">
+                <input type="text" id="email" required autocomplete="off">
+                <label for="email">Enter your e-mail</label>
+                <span class="sendBtn">
+                    <a href="#">
+                        <img src="images/svg/send.svg" alt="send">
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="third-footer">
+            <a href="tel: (484) 600 - 2090" class="footer-phone">
+                (484) 600 - 2090
+            </a>
+            <p class="footer-address">
+                305 Olive Ave B Holland PA 19044
+            </p>
+            <div class="footer-social">
+                <a href="#">
+                    <img src="images/svg/fb.svg" alt="fb" class="mr-3">
+                </a>
+                <a href="#">
+                    <img src="images/svg/inst.svg" alt="insta">
+                </a>
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script src="js/bootstrap/bootstrap.js"></script>

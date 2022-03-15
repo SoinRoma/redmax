@@ -1,24 +1,24 @@
-body{
+body {
     font-family: 'Montserrat', sans-serif;
     background-color: #FBFBFB;
 }
 
-.container{
+.container {
     max-width: 1280px;
     width: 90%;
 }
 
 /*------HEADER---------*/
 
-.header{
+.header {
     padding-top: 30px;
 }
 
-.nav-item{
+.nav-item {
     list-style-type: none;
 }
 
-.nav-link{
+.nav-link {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -27,7 +27,7 @@ body{
     letter-spacing: 1px;
 }
 
-.nav-button{
+.nav-button {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -42,7 +42,7 @@ body{
 
 /*--------MAIN---------*/
 
-.main{
+.main {
     height: 100vh;
     background: url("../images/backgrounds/mainBg.png") no-repeat;
     background-size: cover;
@@ -50,7 +50,7 @@ body{
 }
 
 
-.LogoElement{
+.LogoElement {
     opacity: 0.5;
     position: absolute;
     top: 0;
@@ -59,16 +59,16 @@ body{
 }
 
 
-.mainBlock{
+.mainBlock {
     margin-top: 30vh;
 }
 
-.mainText{
+.mainText {
     margin: auto;
     max-width: 600px;
 }
 
-.mainDescription{
+.mainDescription {
     margin-top: 2%;
     margin-bottom: 3%;
     font-style: normal;
@@ -79,7 +79,7 @@ body{
     max-width: 400px;
 }
 
-.mainButtonLearnMore{
+.mainButtonLearnMore {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -93,7 +93,7 @@ body{
     cursor: pointer;
 }
 
-.mainButtonContactUs{
+.mainButtonContactUs {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -109,11 +109,11 @@ body{
 
 /*-----------ABOUT-------------*/
 
-.about{
+.about {
     margin-top: 6%;
 }
 
-.aboutTitle{
+.aboutTitle {
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
@@ -123,32 +123,32 @@ body{
     margin-left: 10px;
 }
 
-.blockLine{
+.blockLine {
     display: flex;
-    position: absolute!important;
+    position: absolute !important;
     left: 0;
     width: 89%;
     margin-top: 22px;
     align-items: center;
 }
 
-.line{
+.line {
     height: 2px;
     width: 100%;
     background: #000000;
 }
 
-.lineArrow{
+.lineArrow {
     position: absolute;
     right: -7px;
 }
 
-.aboutContent{
+.aboutContent {
     display: flex;
     margin-top: 70px;
 }
 
-.about-subtitle{
+.about-subtitle {
     font-style: normal;
     font-weight: 500;
     font-size: 21px;
@@ -156,7 +156,7 @@ body{
     color: #000000;
 }
 
-.aboutDescription{
+.aboutDescription {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -165,25 +165,25 @@ body{
     max-width: 480px;
 }
 
-.aboutLeft{
+.aboutLeft {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.LogoGray{
+.LogoGray {
     width: 50%;
 }
 
-.aboutImage{
+.aboutImage {
     width: 48%;
 }
 
-.rowBlock{
+.rowBlock {
     margin-bottom: 20px;
 }
 
-.box{
+.box {
     width: 48%;
     background-color: #EAE8E8;
     display: flex;
@@ -192,7 +192,7 @@ body{
     flex-direction: column;
 }
 
-.aboutBlockTitle{
+.aboutBlockTitle {
     font-style: normal;
     font-weight: 500;
     font-size: 21px;
@@ -200,7 +200,7 @@ body{
     color: #000000;
 }
 
-.aboutBlockText{
+.aboutBlockText {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -212,11 +212,11 @@ body{
 
 /*-----------WHY--------------*/
 
-.why{
+.why {
     margin-top: 150px;
 }
 
-.whyTitle{
+.whyTitle {
     font-style: normal;
     font-weight: 500;
     font-size: 45px;
@@ -226,46 +226,46 @@ body{
     margin-right: 20px;
 }
 
-.why-arrow{
+.why-arrow {
     transform: rotate(180deg);
 }
 
-.blockLineReverse{
+.blockLineReverse {
     display: flex;
-    position: absolute!important;
+    position: absolute !important;
     right: 0;
     width: 90%;
     margin-top: 22px;
     align-items: center;
 }
 
-.lineReverse{
+.lineReverse {
     height: 2px;
     width: 100%;
     background: #000000;
 }
 
-.lineArrowReverse{
+.lineArrowReverse {
     position: absolute;
     left: -7px;
 }
 
-.whyContent{
+.whyContent {
     margin-top: 90px;
 }
 
-.why-item{
+.why-item {
     display: flex;
     align-items: start;
     margin-right: 70px;
 }
 
-.whyText{
+.whyText {
     margin-left: 30px;
     max-width: 440px;
 }
 
-.why-subtitle{
+.why-subtitle {
     font-style: normal;
     font-weight: 500;
     font-size: 21px;
@@ -273,7 +273,7 @@ body{
     color: #000000;
 }
 
-.why-description{
+.why-description {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -283,7 +283,7 @@ body{
 
 /*-----------STAT-----------*/
 
-.stat{
+.stat {
     margin-top: 150px;
     background: url("../images/backgrounds/statBg.png") no-repeat;
     background-size: cover;
@@ -291,7 +291,7 @@ body{
     overflow: hidden;
 }
 
-.stat-row{
+.stat-row {
     display: flex;
     justify-content: space-between;
     max-width: 1050px;
@@ -300,7 +300,7 @@ body{
 }
 
 
-.stat-number{
+.stat-number {
     font-style: normal;
     font-weight: 600;
     font-size: 72px;
@@ -311,7 +311,7 @@ body{
     margin-bottom: 20px;
 }
 
-.stat-title{
+.stat-title {
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -320,8 +320,174 @@ body{
     color: #FFFFFF;
 }
 
-.LogoStat{
+.LogoStat {
     position: absolute;
     top: 0;
     right: 3%;
+}
+
+
+/*----------CONTACT-------------*/
+
+.contact {
+    margin-top: 150px;
+}
+
+.contactContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contactTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.contactText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #555555;
+}
+
+.contactForm {
+    margin-top: 40px;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 400px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #757575;
+}
+
+input:focus {
+    outline: none;
+}
+
+label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: #999;
+}
+
+.contactButton {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #FFFFFF;
+    background: #FF0000;
+    border-radius: 5px;
+    padding: 15px 48px;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.contactLine{
+    margin-top: 160px;
+}
+
+
+
+/*---------FOOTER-----------*/
+
+.footer{
+    margin-top: 160px;
+    background: #EAE8E8;
+    padding: 70px 0;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-license{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    color: #555555;
+    margin-top: 75px;
+    max-width: 243px;
+}
+
+.footer-title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.footer-text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #555555;
+    max-width: 400px;
+}
+
+.second-footer .group{
+    margin-top: 35px;
+    margin-bottom: 0;
+}
+
+.sendBtn{
+    position: absolute;
+    top: 25%;
+    right: 0;
+}
+
+.footer-phone{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.footer-address{
+    margin-top: 14px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #555555;
+}
+
+.footer-social{
+    margin-top: 60px;
+    display: flex;
 }

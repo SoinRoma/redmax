@@ -682,3 +682,65 @@ input:focus ~ label, input:valid ~ label {
     color: #555555;
 }
 
+/*----------CARRIERS------------*/
+
+.carriers{
+    background: url("../images/backgrounds/carriersBg.png") no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.carriersDescription{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #555555;
+    max-width: 600px;
+}
+
+
+/*-------------APP-------------*/
+
+.app{
+    margin-top: 200px;
+    background-color: #F9F9FA;
+    position: relative;
+}
+
+.app-content{
+   padding: 80px 100px 80px;
+}
+
+.app-title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 56px;
+    color: #000000;
+}
+
+.app-subtitle{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #555555;
+    margin-top: 20px;
+}
+
+.app-buttons{
+    display: flex;
+    max-width: 300px;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.phone{
+    position: absolute;
+    right: 20%;
+    bottom: 0;
+}
+

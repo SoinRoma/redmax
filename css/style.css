@@ -237,14 +237,31 @@ body {
 
 .blockLineReverse {
     display: flex;
-    position: absolute !important;
     right: 0;
-    width: 90%;
     margin-top: 22px;
     align-items: center;
+    position: relative;
+
 }
 
 .lineReverse {
+    height: 2px;
+    width: 100%;
+    background: #000000;
+    overflow: hidden;
+}
+
+.blockLineReverseRight {
+    display: flex;
+    right: 0;
+    margin-top: -2px;
+    align-items: center;
+    width: 50%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.lineReverseRight{
     height: 2px;
     width: 100%;
     background: #000000;
@@ -589,3 +606,79 @@ input:focus ~ label, input:valid ~ label {
     cursor: pointer;
     width: 40%;
 }
+
+.service-btn:hover{
+    color: #FFFFFF;
+    background: #FF0000;
+    border: 1px solid #FF0000;
+}
+
+
+/*-------------SHIPPERS----------*/
+
+.shippers{
+    background: url("../images/backgrounds/shippersBg.png") no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.redmax{
+    margin-right: 10px;
+}
+
+
+.contactText-shippers{
+    max-width: 400px;
+}
+
+/*-----------ADVANTAGES--------------*/
+
+.advantages {
+    margin-top: 150px;
+}
+
+.advantagesTitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-right: 20px;
+}
+
+.advantages-arrow {
+    transform: rotate(180deg);
+}
+
+.advantagesContent {
+    margin-top: 90px;
+}
+
+.advantages-item {
+    display: flex;
+    align-items: start;
+    margin-right: 70px;
+}
+
+.advantagesText {
+    margin-left: 30px;
+    max-width: 440px;
+}
+
+.advantages-subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.advantages-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #555555;
+}
+

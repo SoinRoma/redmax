@@ -27,6 +27,10 @@ body {
     letter-spacing: 1px;
 }
 
+.active-link{
+    color: #FF0000;
+}
+
 .nav-button {
     font-style: normal;
     font-weight: 400;
@@ -41,6 +45,7 @@ body {
 }
 
 /*--------MAIN---------*/
+
 
 .main {
     height: 100vh;
@@ -411,18 +416,19 @@ input:focus ~ label, input:valid ~ label {
     cursor: pointer;
 }
 
-.contactLine{
-    margin-top: 160px;
-}
-
-
 
 /*---------FOOTER-----------*/
 
 .footer{
+    position: relative;
     margin-top: 160px;
     background: #EAE8E8;
     padding: 70px 0;
+}
+
+.contactLine{
+    top: 0;
+    margin-top: 0;
 }
 
 .footer-row{
@@ -490,4 +496,96 @@ input:focus ~ label, input:valid ~ label {
 .footer-social{
     margin-top: 60px;
     display: flex;
+}
+
+
+/*----------BROKERS--------*/
+
+.brokers{
+    background: url("../images/backgrounds/brokerBg.png") no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.mainBlockBrokers{
+    margin-top: 25vh;
+}
+
+.brokers-main-title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+/*------------SERVICES----------*/
+
+.services {
+    margin-top: 6%;
+}
+
+.servicesTitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-left: 10px;
+}
+
+.servicesContent {
+    margin-top: 70px;
+}
+
+.services-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.services-image{
+    margin-right: 10%;
+}
+
+.service-text{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.services-title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+}
+
+
+.services-description{
+    margin-top: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #555555;
+}
+
+.service-btn{
+    margin-top: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 26px;
+    color: #000000;
+    background: transparent;
+    border-radius: 5px;
+    padding: 15px 48px;
+    border: 1px solid #FF0000;
+    cursor: pointer;
+    width: 40%;
 }

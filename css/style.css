@@ -744,3 +744,57 @@ input:focus ~ label, input:valid ~ label {
     bottom: 0;
 }
 
+
+/*----------CONTACT PAGE---------*/
+
+.contactPage{
+    margin-top: 90px;
+}
+
+/*------------SITEMAP-----------*/
+
+.sitemap{
+    background: url("../images/backgrounds/sitemapBg.png") no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.sitemap-title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.sitemapItem{
+    margin: 10px 0;
+}
+
+.sitemap-main-text{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px;
+    color: #000000;
+}
+
+.sitemap-main-text:hover{
+    text-decoration: none;
+    color: #FF0000;
+}
+
+.sitemap-text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #555555;
+}
+
+.sitemap-text:hover{
+    text-decoration: none;
+    color: #FF0000;
+}

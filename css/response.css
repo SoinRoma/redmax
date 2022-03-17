@@ -15,6 +15,31 @@
     }
 }
 
+@media (max-width: 1100px) {
+    .app-content {
+        padding: 60px 30px 0;
+    }
+    .app-row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .app-buttons {
+        margin: auto;
+    }
+
+    .phone {
+        position: inherit;
+        right: 20%;
+        bottom: 0;
+        width: 64%;
+        margin-top: 40px;
+    }
+
+}
+
 @media (max-width: 1030px) {
     .header-logo-redmax {
         width: 100px;
@@ -28,6 +53,10 @@
         font-size: 14px;
         line-height: 18px;
         padding: 12px 32px;
+    }
+
+    .app-row{
+        display: block;
     }
 }
 
@@ -103,6 +132,19 @@
         line-height: 14px;
         padding: 10px 16px;
     }
+
+    .mainBlockBrokers{
+        margin-top: 20vh;
+    }
+
+    .brokers-main-title {
+        font-size: 35px;
+    }
+
+    .redmax{
+        width: 172px;
+    }
+
 
 }
 
@@ -207,12 +249,31 @@
         padding-bottom: 20px;
     }
 
-    .contactTitle {
+    .contactTitles {
         font-size: 25px;
     }
 
     .second-footer input{
         width: 300px;
+    }
+
+    .mainBlockBrokers{
+        margin-top: 10vh;
+        display: block !important;
+        text-align: center;
+        padding: 0 60px;
+    }
+
+    .brokers-main-title div{
+        justify-content: center;
+    }
+
+    .brokers-main-title {
+        font-size: 35px;
+    }
+
+    .redmax{
+        width: 172px;
     }
 
 

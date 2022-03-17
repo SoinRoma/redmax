@@ -579,6 +579,7 @@ input:focus ~ label, input:valid ~ label {
 
 .mainBlockBrokers{
     margin-top: 25vh;
+    display: flex;
 }
 
 .brokers-main-title{
@@ -711,7 +712,6 @@ input:focus ~ label, input:valid ~ label {
 .advantages-item {
     display: flex;
     align-items: start;
-    margin-right: 70px;
 }
 
 .advantagesText {
@@ -758,7 +758,7 @@ input:focus ~ label, input:valid ~ label {
 /*-------------APP-------------*/
 
 .app{
-    margin-top: 200px;
+    margin-top: 150px;
     background: #EAE8E8;
     position: relative;
     border-radius: 10px;
@@ -766,6 +766,10 @@ input:focus ~ label, input:valid ~ label {
 
 .app-content{
    padding: 80px 100px 80px;
+}
+
+.app-row{
+    display: flex;
 }
 
 .app-title{

@@ -404,6 +404,10 @@ body {
     margin-bottom: 20px;
 }
 
+.contactLeft{
+    margin-right: 20px;
+}
+
 .contactText {
     font-style: normal;
     font-weight: 400;
@@ -466,6 +470,10 @@ input:focus ~ label, input:valid ~ label {
     cursor: pointer;
 }
 
+.contactRight img{
+    width: 100%;
+}
+
 
 /*---------FOOTER-----------*/
 
@@ -486,14 +494,18 @@ input:focus ~ label, input:valid ~ label {
     justify-content: space-between;
 }
 
-.footer-license{
+.footer-license, .footer-license2{
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 21px;
     color: #555555;
-    margin-top: 75px;
+    margin: 0;
     max-width: 243px;
+}
+
+.footer-license2{
+    display: none;
 }
 
 .footer-title{
@@ -544,8 +556,16 @@ input:focus ~ label, input:valid ~ label {
 }
 
 .footer-social{
-    margin-top: 60px;
     display: flex;
+}
+
+.first-footer, .second-footer, .third-footer{
+    margin-right: 20px;
+    min-height: 200px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 

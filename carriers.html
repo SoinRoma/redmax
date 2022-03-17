@@ -10,28 +10,39 @@
     <link rel="icon" href="images/logos/favicon.svg">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/response.css">
     <title>REDMAX - Carriers</title>
 </head>
 <body>
 
 <section class="carriers main">
     <header class="header container">
-        <nav class="d-flex align-items-center">
-            <div class="header-logo col-4 p-0">
-                <a href="index.html">
-                    <img src="images/logos/logo.svg" alt="logo">
-                </a>
-            </div>
-            <div class="col-5 p-0 ">
-                <ul class="d-flex nav-list justify-content-end m-0">
+        <nav class="d-flex align-items-center justify-content-between">
+            <a href="index.html" class="header-logo-redmax">
+                <img src="images/logos/logo.svg" alt="logo" >
+            </a>
+            <button class="menu-button">
+                <img src="images/svg/burger.svg" alt="menu" class="menu-button-icon">
+            </button>
+            <button class="menu-close">
+                <img src="images/svg/close.svg" alt="back" class="menu-close-icon">
+            </button>
+            <div class="nav-menu  p-0">
+                <ul class="nav-list">
                     <li class="nav-item"><a href="brokers.html" class="nav-link">Brokers</a></li>
-                    <li class="nav-item"><a href="shippers.html" class="nav-link ">Shippers</a></li>
+                    <li class="nav-item"><a href="shippers.html" class="nav-link">Shippers</a></li>
                     <li class="nav-item"><a href="carriers.html" class="active-link nav-link">Carriers</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     <li class="nav-item"><a href="sitemap.html" class="nav-link">Sitemap</a></li>
                 </ul>
-            </div>
-            <div class="col-3 p-0 d-flex justify-content-end">
+                <div class="header-social">
+                    <a href="#">
+                        <img src="images/svg/fb.svg" alt="fb" class="mr-3">
+                    </a>
+                    <a href="#">
+                        <img src="images/svg/inst.svg" alt="insta">
+                    </a>
+                </div>
                 <button class="nav-button">
                     Call back
                 </button>
@@ -198,6 +209,7 @@
 
 <script src="js/bootstrap/bootstrap.js"></script>
 <script src="js/bootstrap/popper.min.js"></script>
+<script src="js/burger/main.js"></script>
 </body>
 </html>
 

@@ -316,7 +316,6 @@ body {
 .why-item {
     display: flex;
     align-items: start;
-    margin-right: 70px;
 }
 
 .whyText {
@@ -587,7 +586,7 @@ input:focus ~ label, input:valid ~ label {
 .brokers{
     background: url("../images/backgrounds/brokerBg.png") no-repeat;
     background-size: cover;
-    background-position: bottom;
+    background-position: center;
 }
 
 .mainBlockBrokers{
@@ -633,10 +632,6 @@ input:focus ~ label, input:valid ~ label {
 
 .services-image{
     margin-right: 10%;
-}
-
-.services-image img{
-    width: 100%;
 }
 
 .service-text{

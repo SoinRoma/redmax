@@ -161,6 +161,14 @@
         width: 172px;
     }
 
+    .services-image img{
+        width: 100%;
+    }
+
+    .footer {
+        margin-top: 90px;
+    }
+
 
 }
 
@@ -247,7 +255,9 @@
         padding: 26px 98px;
     }
 
-    .
+    .why {
+        margin-top: 90px;
+    }
 
 }
 
@@ -307,8 +317,8 @@
         width: 90%;
     }
 
-    .advantagesTitle {
-        font-size: 35px;
+    .advantagesTitle, .whyTitle {
+        font-size: 30px;
     }
 
     .carriersDescription {
@@ -335,9 +345,20 @@
         height: 60vh;
     }
 
+    .brokers {
+        background: url(../images/backgrounds/brokersBg2.png) no-repeat ;
+        background-size: cover;
+        background-position: center center;
+        height: 60vh;
+    }
+
 }
 
 @media (max-width: 386px) {
+
+    .advantagesTitle, .whyTitle {
+        font-size: 25px;
+    }
 
     .app-title {
         font-size: 21px;

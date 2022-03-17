@@ -34,9 +34,20 @@
         position: inherit;
         right: 20%;
         bottom: 0;
-        width: 64%;
+        width: 34%;
         margin-top: 40px;
     }
+
+    .services-row {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .service-text {
+        margin-top: 20px;
+        max-width: 600px;
+    }
+
 
 }
 
@@ -85,8 +96,13 @@
         margin-top: 45px;
     }
 
-    .footer-license{
+    .footer-license, .powered{
         display: none;
+    }
+
+    .powered2{
+        margin-top: 30px;
+        display: block;
     }
 
     .footer-license2{
@@ -231,6 +247,8 @@
         padding: 26px 98px;
     }
 
+    .
+
 }
 
 
@@ -304,6 +322,17 @@
 
     .phone {
         width: 84%;
+    }
+
+    .servicesTitle {
+        font-size: 35px;
+    }
+
+    .shippers {
+        background: url(../images/backgrounds/shippersBg2.png) no-repeat ;
+        background-size: cover;
+        background-position: top center;
+        height: 60vh;
     }
 
 }

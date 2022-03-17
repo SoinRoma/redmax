@@ -43,6 +43,10 @@ body {
     letter-spacing: 1px;
 }
 
+.nav-link:hover{
+    color: #FF0000;
+}
+
 .nav-list{
     display: flex;
     justify-content: end;
@@ -504,7 +508,7 @@ input:focus ~ label, input:valid ~ label {
     max-width: 243px;
 }
 
-.footer-license2{
+.footer-license2, .powered2{
     display: none;
 }
 
@@ -568,6 +572,15 @@ input:focus ~ label, input:valid ~ label {
     justify-content: space-between;
 }
 
+.powered {
+    bottom: 20px;
+    color: grey;
+}
+
+.altek {
+    margin-left: 10px;
+}
+
 
 /*----------BROKERS--------*/
 
@@ -622,6 +635,10 @@ input:focus ~ label, input:valid ~ label {
     margin-right: 10%;
 }
 
+.services-image img{
+    width: 100%;
+}
+
 .service-text{
     display: flex;
     justify-content: space-between;
@@ -658,7 +675,7 @@ input:focus ~ label, input:valid ~ label {
     padding: 15px 48px;
     border: 1px solid #FF0000;
     cursor: pointer;
-    width: 40%;
+    width: 190px;
 }
 
 .service-btn:hover{

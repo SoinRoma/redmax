@@ -27,9 +27,14 @@
         line-height: 14px;
         padding: 10px 16px;
     }
+
 }
 
 @media (max-width: 685px) {
+
+    .mainBlock {
+        margin-top: 14vh;
+    }
 
     .header-logo-redmax {
         width: 24%;
@@ -106,5 +111,25 @@
         font-size: 27px;
         padding: 26px 98px;
     }
+
+}
+
+
+@media (max-width: 576px) {
+    .mainBlock {
+        margin-top: 8vh;
+    }
+
+    .sitemap{
+        background: url("../images/backgrounds/sitemapBg.png") no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        height: 100%;
+    }
+
+    .lastsiteMap{
+        padding-bottom: 20px;
+    }
+
 
 }

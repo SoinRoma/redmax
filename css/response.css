@@ -508,6 +508,11 @@
         max-width: 280px;
     }
 
+    .white-popup {
+        padding: 30px 30px 40px;
+        width: 75%;
+    }
+
 }
 
 @media (max-width: 386px) {

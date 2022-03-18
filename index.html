@@ -10,6 +10,7 @@
     <link rel="icon" href="images/logos/favicon.svg">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="js/carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="js/popup/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/response.css">
     <title>REDMAX</title>
@@ -60,14 +61,19 @@
                 our customers to reduce their costs, improve efficiency, and manage risk.
             </p>
             <div class="mainButtons">
-                <button class="mainButtonLearnMore">
-                    Learn more
-                </button>
-                <button class="mainButtonContactUs">
-                    Contact us
-                </button>
+                <div>
+                    <a href="#" class="btn w-100 mainButtonLearnMore">
+                        Learn more
+                    </a>
+                </div>
+                <div>
+                    <a href="#openModal" class="btn w-100 mainButtonContactUs openModal" data-effect="mfp-zoom-in">
+                        Contact us
+                    </a>
+                </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 
@@ -337,15 +343,63 @@
     </div>
 </footer>
 
+<div id="openModal" class="white-popup white-popup__settings mfp-with-anim mfp-hide">
+    <div class="popup-main">
+        <div class="contactLeftModal">
+            <h2 class="contactTitle">Call back</h2>
+            <p class="contactText">
+                Please let us know the nature of your inquiry
+                and we will get back to you shortly
+            </p>
+            <form action="#" class="contactForm">
+                <div class="group">
+                    <input type="text" id="nameModal" required autocomplete="off">
+                    <label for="nameModal">Your name</label>
+                </div>
+                <div class="group">
+                    <input type="text" id="phoneModal" required autocomplete="off">
+                    <label for="phoneModal">Phone number</label>
+                </div>
+                <button class="contactButtonModal">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.js"></script>
 <script src="js/bootstrap/bootstrap.js"></script>
 <script src="js/bootstrap/popper.min.js"></script>
-<script src="js/jquery.js"></script>
 <script src="js/counter/waypoints.min.js"></script>
 <script src="js/counter/jquery.counterup.min.js"></script>
 <script src="js/counter/main.js"></script>
 <script src="js/burger/main.js"></script>
 <script src="js/carousel/owl.carousel.min.js"></script>
 <script src="js/carousel/main.js"></script>
+<script src="js/popup/jquery.magnific-popup.min.js"></script>
+
+<script>
+
+    $(document).ready(function () {
+        $('.openModal').magnificPopup({
+            removalDelay: 500,
+            callbacks: {
+                beforeOpen: function () {
+                    this.st.mainClass = this.st.el.attr('data-effect');
+                }
+            },
+            midClick: true
+        });
+
+        $(".closeBtn").click(function () {
+            $.magnificPopup.close();
+        });
+    });
+
+
+</script>
 </body>
 </html>
 

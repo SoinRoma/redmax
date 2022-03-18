@@ -9,6 +9,7 @@
           rel="stylesheet">
     <link rel="icon" href="images/logos/favicon.svg">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="js/carousel/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/response.css">
     <title>REDMAX</title>
@@ -19,7 +20,7 @@
     <header class="header container">
         <nav class="d-flex align-items-center justify-content-between">
             <a href="index.html" class="header-logo-redmax">
-                <img src="images/logos/logo.svg" alt="logo" >
+                <img src="images/logos/logo.svg" alt="logo">
             </a>
             <button class="menu-button">
                 <img src="images/svg/burger.svg" alt="menu" class="menu-button-icon">
@@ -50,15 +51,15 @@
         </nav>
     </header>
     <div class="container d-flex mainBlock">
-        <div class="col-5 w-100 p-0"></div>
-        <div class="col-7 mainText p-0">
+        <div class="mainLeft p-0"></div>
+        <div class=" mainText p-0">
             <img src="images/logos/LogoFull.svg" alt="LogoFull">
             <p class="mainDescription">
                 Redmax is a leading supply chain management company.
                 Our expertise lies in designing and implementing solutions that help
                 our customers to reduce their costs, improve efficiency, and manage risk.
             </p>
-            <div class="d-flex">
+            <div class="mainButtons">
                 <button class="mainButtonLearnMore">
                     Learn more
                 </button>
@@ -80,7 +81,7 @@
         <img src="images/svg/lineArrow.svg" alt="lineArrow" class="lineArrow">
     </div>
     <div class="aboutContent">
-        <div class="col-6 aboutLeft">
+        <div class="col-12 col-xl-6 aboutLeft">
             <div>
                 <h3 class="about-subtitle">What We Do</h3>
                 <p class="aboutDescription">
@@ -97,15 +98,15 @@
             </div>
             <img src="images/svg/LogoGray.svg" alt="LogoGray" class="LogoGray">
         </div>
-        <div class="col-6">
-            <div class="d-flex justify-content-between rowBlock">
+        <div class="col-12 col-xl-6 aboutRight">
+            <div class="rowBlock">
                 <img src="images/img/ourMission.png" alt="ourMission" class="aboutImage">
                 <div class="box">
                     <h3 class="aboutBlockTitle">Our Mission</h3>
                     <p class="aboutBlockText">To deliver a positive and reliable experience to every customer</p>
                 </div>
             </div>
-            <div class="d-flex justify-content-between rowBlock">
+            <div class="rowBlock2">
                 <div class="box">
                     <h3 class="aboutBlockTitle">Our Promise</h3>
                     <p class="aboutBlockText">To exceed our customers’ expectations by always bringing quality
@@ -113,9 +114,41 @@
                 </div>
                 <img src="images/img/ourPromise.png" alt="ourPromise" class="aboutImage">
             </div>
-            <div class="d-flex justify-content-between">
+            <div class="rowBlock">
                 <img src="images/img/ourVibe.png" alt="ourVibe" class="aboutImage">
                 <div class="box">
+                    <h3 class="aboutBlockTitle">Our Vibe</h3>
+                    <p class="aboutBlockText">We dream it, and then do it—together—reinventing what’s possible</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel">
+        <div class="owl-carousel ">
+            <div class="slide">
+                <img src="images/img/ourMission.png" alt="ourMission" class="aboutImageSlide">
+            </div>
+            <div class="slide">
+                <div class="box-slide">
+                    <h3 class="aboutBlockTitle">Our Mission</h3>
+                    <p class="aboutBlockText">To deliver a positive and reliable experience to every customer</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/img/ourPromise.png" alt="ourPromise" class="aboutImageSlide">
+            </div>
+            <div class="slide">
+                <div class="box-slide">
+                    <h3 class="aboutBlockTitle">Our Promise</h3>
+                    <p class="aboutBlockText">To exceed our customers’ expectations by always bringing quality
+                        service</p>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/img/ourVibe.png" alt="ourVibe" class="aboutImageSlide">
+            </div>
+            <div class="slide">
+                <div class="box-slide">
                     <h3 class="aboutBlockTitle">Our Vibe</h3>
                     <p class="aboutBlockText">We dream it, and then do it—together—reinventing what’s possible</p>
                 </div>
@@ -137,8 +170,8 @@
         <span class="lineReverseRight"></span>
     </div>
     <div class="whyContent">
-        <div class="d-flex mb-5">
-            <div class="why-item">
+        <div class="row">
+            <div class="why-item col-12 col-md-6 mb-3">
                 <img src="images/svg/icon1.svg" alt="" class="why-icon">
                 <div class="whyText">
                     <h2 class="why-subtitle">Bid On Loads</h2>
@@ -149,7 +182,7 @@
                     </p>
                 </div>
             </div>
-            <div class="why-item">
+            <div class="why-item col-12 col-md-6 mb-3">
                 <img src="images/svg/icon2.svg" alt="" class="why-icon">
                 <div class="whyText">
                     <h2 class="why-subtitle">Reliable Service</h2>
@@ -161,8 +194,8 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex">
-            <div class="why-item">
+        <div class="row">
+            <div class="why-item col-12 col-md-6 mb-3">
                 <img src="images/svg/icon3.svg" alt="" class="why-icon">
                 <div class="whyText">
                     <h2 class="why-subtitle">Document sync</h2>
@@ -172,7 +205,7 @@
                     </p>
                 </div>
             </div>
-            <div class="why-item">
+            <div class="why-item col-12 col-md-6 mb-3">
                 <img src="images/svg/icon4.svg" alt="" class="why-icon">
                 <div class="whyText">
                     <h2 class="why-subtitle">Thousand of shipments</h2>
@@ -311,6 +344,8 @@
 <script src="js/counter/jquery.counterup.min.js"></script>
 <script src="js/counter/main.js"></script>
 <script src="js/burger/main.js"></script>
+<script src="js/carousel/owl.carousel.min.js"></script>
+<script src="js/carousel/main.js"></script>
 </body>
 </html>
 

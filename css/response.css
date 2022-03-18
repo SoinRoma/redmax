@@ -13,6 +13,30 @@
     .contactForm input {
         width: 300px;
     }
+
+    .aboutContent {
+        display: block;
+        margin-top: 70px;
+    }
+
+    .aboutLeft {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .LogoGray {
+        max-height: 300px;
+        height: 30%;
+    }
+
+    .aboutRight{
+        display: none;
+    }
+
+    .carousel{
+        display: block;
+    }
 }
 
 @media (max-width: 1100px) {
@@ -72,6 +96,42 @@
 }
 
 @media (max-width: 958px) {
+
+    .main {
+        height: 100vh;
+        background: url("../images/backgrounds/mainBg2.png") no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    .mainText{
+        margin: initial;
+    }
+
+    .mainText img {
+        width: 99%;
+    }
+
+    .mainDescription {
+        margin-top: 5%;
+    }
+
+    .mainButtons{
+        display: block;
+    }
+
+    .mainButtons button{
+        width: 100%;
+    }
+
+    .mainButtonLearnMore{
+        margin-bottom: 20px;
+    }
+
+
+    .mainLeft{
+        display: none;
+    }
     .footer {
         padding: 30px 0;
     }
@@ -133,9 +193,44 @@
         width: 100%;
     }
 
+    .stat-number {
+        font-size: 52px;
+    }
+
 }
 
 @media (max-width: 840px) {
+
+    .stat {
+        height: 60vh;
+        margin-top: 60px;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .LogoStat {
+        position: absolute;
+        top: 0;
+        right: 3%;
+        width: 60%;
+        min-width: 450px;
+    }
+
+
+    .stat-row{
+        padding-top: 50px;
+        display: block;
+    }
+
+    .stat-item{
+        margin-bottom: 70px;
+
+    }
+    .stat-number {
+        font-size: 42px;
+    }
 
     .nav-link {
         font-size: 13px;
@@ -169,10 +264,29 @@
         margin-top: 90px;
     }
 
+}
+
+@media (max-width: 799px) {
+    .LogoGray {
+        display: none;
+    }
+
 
 }
 
 @media (max-width: 685px) {
+
+    .stat-item {
+        margin-bottom: 40px;
+    }
+
+    .main {
+        height: 70vh;
+    }
+
+    .carriers{
+        height: 100vh;
+    }
 
     .mainBlock {
         margin-top: 14vh;
@@ -258,6 +372,37 @@
     .why {
         margin-top: 90px;
     }
+
+    .carousel{
+        display: none;
+    }
+
+    .aboutRight{
+        display: block;
+    }
+
+    .rowBlock{
+        display: block;
+    }
+
+    .rowBlock2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .aboutImage{
+        margin-bottom: 20px;
+        max-width: 380px;
+        height: 320px;
+        width: 90%;
+    }
+
+    .box {
+        width: 90%;
+        height: 320px;
+        max-width: 380px;
+    }
+
 
 }
 
@@ -352,9 +497,42 @@
         height: 60vh;
     }
 
+    .aboutImage{
+        max-width: 280px;
+        height: 220px;
+
+    }
+
+    .box {
+        height: 220px;
+        max-width: 280px;
+    }
+
 }
 
 @media (max-width: 386px) {
+
+    .aboutImage{
+        max-width: 220px;
+        height: 160px;
+
+    }
+
+    .box {
+        max-width: 220px;
+        height: 160px;
+    }
+
+    .aboutBlockTitle {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .aboutBlockText {
+        font-size: 13px;
+        line-height: 16px;
+        padding: 0 20px;
+    }
 
     .advantagesTitle, .whyTitle {
         font-size: 25px;

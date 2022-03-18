@@ -119,14 +119,14 @@ body {
 }
 
 .mainDescription {
-    margin-top: 2%;
-    margin-bottom: 3%;
+    margin-top: 35px;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 26px;
     color: #555555;
     max-width: 400px;
+    margin-bottom: 40px;
 }
 
 .mainButtonLearnMore {

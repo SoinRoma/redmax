@@ -281,7 +281,7 @@
     }
 
     .main {
-        height: 70vh;
+        height: 80vh;
     }
 
     .carriers{
@@ -463,7 +463,7 @@
     }
 
     .advantagesTitle, .whyTitle {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .carriersDescription {
@@ -487,14 +487,14 @@
         background: url(../images/backgrounds/shippersBg2.png) no-repeat ;
         background-size: cover;
         background-position: top center;
-        height: 60vh;
+        height: 75vh;
     }
 
     .brokers {
         background: url(../images/backgrounds/brokersBg2.png) no-repeat ;
         background-size: cover;
         background-position: center center;
-        height: 60vh;
+        height: 75vh;
     }
 
     .aboutImage{

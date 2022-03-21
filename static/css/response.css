@@ -1,0 +1,594 @@
+@media (max-width: 1200px) {
+    .servicesTitle {
+        font-size: 40px;
+    }
+
+    .contactTitle {
+        font-size: 35px;
+    }
+
+    .contactRight {
+    }
+
+    .contactForm input {
+        width: 300px;
+    }
+
+    .aboutContent {
+        display: block;
+        margin-top: 70px;
+    }
+
+    .aboutLeft {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .LogoGray {
+        max-height: 300px;
+        height: 30%;
+    }
+
+    .aboutRight {
+        display: none;
+    }
+
+    .carousel {
+        display: block;
+    }
+}
+
+@media (max-width: 1100px) {
+    .app-content {
+        padding: 60px 30px 0;
+    }
+
+    .app-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .app-buttons {
+        margin: auto;
+    }
+
+    .phone {
+        position: inherit;
+        right: 20%;
+        bottom: 0;
+        width: 34%;
+        margin-top: 40px;
+    }
+
+    .services-row {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .service-text {
+        margin-top: 20px;
+        max-width: 600px;
+    }
+
+
+}
+
+@media (max-width: 1030px) {
+    .header-logo-redmax {
+        width: 100px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .nav-button {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 12px 32px;
+    }
+
+    .app-row {
+        display: block;
+    }
+}
+
+@media (max-width: 958px) {
+
+    .main {
+        height: 100vh;
+        background: url("../images/backgrounds/mainBg2.png") no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    .mainText {
+        margin: initial;
+    }
+
+    .mainText img {
+        width: 99%;
+    }
+
+    .mainDescription , .mainDescriptionShippers {
+        margin-top: 5%;
+    }
+
+    .mainButtons {
+        display: block;
+    }
+
+    .mainButtons button {
+        width: 100%;
+    }
+
+    .mainButtonLearnMore {
+        margin-bottom: 20px;
+    }
+
+
+    .mainLeft {
+        display: none;
+    }
+
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-row {
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+    .first-footer, .second-footer, .third-footer {
+        margin-right: 20px;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .footer-phone {
+        margin-top: 45px;
+    }
+
+    .footer-license, .powered {
+        display: none;
+    }
+
+    .powered2 {
+        margin-top: 30px;
+        display: block;
+    }
+
+    .footer-license2 {
+        margin-top: 30px;
+        display: block;
+    }
+
+    .contact {
+        margin-top: 80px;
+    }
+
+    .contactContent {
+        display: block;
+    }
+
+    .contactTitle {
+        font-size: 45px;
+    }
+
+    .contactLeft {
+        margin: 0 0 40px;
+    }
+
+    .contactForm input {
+        width: 100%;
+    }
+
+    .contactButton {
+        width: 100%;
+    }
+
+    .stat-number {
+        font-size: 52px;
+    }
+
+}
+
+@media (max-width: 840px) {
+
+    .stat {
+        height: 60vh;
+        margin-top: 60px;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .LogoStat {
+        position: absolute;
+        top: 0;
+        right: 3%;
+        width: 60%;
+        min-width: 450px;
+    }
+
+
+    .stat-row {
+        padding-top: 50px;
+        display: block;
+    }
+
+    .stat-item {
+        margin-bottom: 70px;
+
+    }
+
+    .stat-number {
+        font-size: 42px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .nav-button {
+        font-size: 13px;
+        line-height: 14px;
+        padding: 10px 16px;
+    }
+
+    .mainBlockBrokers {
+        margin-top: 20vh;
+    }
+
+    .brokers-main-title {
+        font-size: 35px;
+    }
+
+    .redmax {
+        width: 172px;
+    }
+
+    .services-image img {
+        width: 100%;
+    }
+
+    .footer {
+        margin-top: 90px;
+    }
+
+}
+
+@media (max-width: 799px) {
+    .LogoGray {
+        display: none;
+    }
+
+
+}
+
+@media (max-width: 685px) {
+
+    .stat-item {
+        margin-bottom: 40px;
+    }
+
+    .main {
+        height: 80vh;
+    }
+
+    .carriers {
+        height: 100vh;
+    }
+
+    .mainBlock {
+        margin-top: 14vh;
+    }
+
+    .header-logo-redmax {
+        width: 150px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.2s;
+        text-align: center;
+    }
+
+    .menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        color: white;
+    }
+
+    .menu-close {
+        opacity: 0;
+        position: fixed;
+        right: 7%;
+        top: 3.5%;
+        display: flex;
+        align-items: center;
+        z-index: 10;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+        transform: translateX(300%);
+        transition: transform 0.2s;
+        transition-delay: 0.4s;
+    }
+
+    .is-active {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+    .nav-list {
+        display: block;
+    }
+
+    .nav-link {
+        font-size: 27px;
+        margin-bottom: 33px;
+    }
+
+    .header-social {
+        display: flex;
+        margin-bottom: 70px;
+    }
+
+    .header-social img {
+        width: 70px;
+    }
+
+    .nav-button {
+        margin-left: 0;
+        font-size: 27px;
+        padding: 26px 98px;
+    }
+
+    .why {
+        margin-top: 90px;
+    }
+
+    .carousel {
+        display: none;
+    }
+
+    .aboutRight {
+        display: block;
+    }
+
+    .rowBlock {
+        display: block;
+    }
+
+    .rowBlock2 {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .aboutImage {
+        margin-bottom: 20px;
+        max-width: 380px;
+        height: 320px;
+        width: 90%;
+    }
+
+    .box {
+        width: 90%;
+        height: 320px;
+        max-width: 380px;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .mainBlock {
+        margin-top: 8vh;
+    }
+
+    .sitemap {
+        background: url("../images/backgrounds/sitemapBg.png") no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        height: 100%;
+    }
+
+    .lastsiteMap {
+        padding-bottom: 20px;
+    }
+
+    .contactTitles {
+        font-size: 25px;
+    }
+
+    .second-footer input {
+        width: 300px;
+    }
+
+    .mainBlockBrokers {
+        margin-top: 10vh;
+        display: block !important;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .mainButtonLearnMore {
+        margin-right: 0;
+    }
+
+    .brokers-main-title div {
+        justify-content: center;
+    }
+
+    .brokers-main-title {
+        font-size: 35px;
+    }
+
+    .redmax {
+        width: 172px;
+    }
+
+    .contactTitle {
+        font-size: 30px;
+    }
+
+    .app-buttons img {
+        width: 90%;
+    }
+
+    .advantagesTitle, .whyTitle {
+        font-size: 25px;
+    }
+
+    .carriersDescription {
+        max-width: 100%;
+    }
+
+    .app-title {
+        line-height: 36px;
+        font-size: 35px;
+    }
+
+    .phone {
+        width: 84%;
+    }
+
+    .servicesTitle {
+        font-size: 35px;
+    }
+
+    .shippers {
+        background: url(../images/backgrounds/shippersBg2.png) no-repeat;
+        background-size: cover;
+        background-position: top center;
+        height: 75vh;
+    }
+
+    .brokers {
+        background: url(../images/backgrounds/brokersBg2.png) no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 75vh;
+    }
+
+    .aboutImage {
+        max-width: 280px;
+        height: 220px;
+
+    }
+
+    .box {
+        height: 220px;
+        max-width: 280px;
+    }
+
+    .white-popup {
+        padding: 30px 30px 40px;
+        width: 75%;
+    }
+
+}
+
+@media (max-width: 386px) {
+
+    .aboutImage {
+        max-width: 220px;
+        height: 160px;
+
+    }
+
+    .box {
+        max-width: 220px;
+        height: 160px;
+    }
+
+    .aboutBlockTitle {
+        font-size: 16px;
+        line-height: 16px;
+    }
+
+    .aboutBlockText {
+        font-size: 13px;
+        line-height: 16px;
+        padding: 0 20px;
+    }
+
+    .advantagesTitle, .whyTitle {
+        font-size: 25px;
+    }
+
+    .app-title {
+        font-size: 21px;
+    }
+
+    .brokers-main-title {
+        font-size: 25px;
+    }
+
+    .redmax {
+        width: 132px;
+    }
+
+    .nav-link {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    .nav-button {
+        font-size: 24px;
+        padding: 26px 58px;
+    }
+
+    .header-social img {
+        width: 50px;
+    }
+
+    .contactTitle {
+        font-size: 25px;
+    }
+
+    .second-footer input {
+        width: 250px;
+    }
+
+}
+
+
+@media (min-height: 600px) and (min-width: 900px){
+    .mainBlock {
+        margin-top: 19vh;
+    }
+
+    .mainBlockBrokers{
+       margin-top: 15vh;
+    }
+}

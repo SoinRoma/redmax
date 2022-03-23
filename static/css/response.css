@@ -98,6 +98,10 @@
 
 @media (max-width: 958px) {
 
+    .mainBlock {
+        margin-top: 20vh !important;
+    }
+
     .main {
         height: 100vh;
         background: url("../images/backgrounds/mainBg2.png") no-repeat;
@@ -113,7 +117,7 @@
         width: 99%;
     }
 
-    .mainDescription , .mainDescriptionShippers {
+    .mainDescription, .mainDescriptionShippers {
         margin-top: 5%;
     }
 
@@ -412,7 +416,7 @@
 
 @media (max-width: 576px) {
     .mainBlock {
-        margin-top: 8vh;
+        margin-top: 15vh;
     }
 
     .sitemap {
@@ -435,7 +439,7 @@
     }
 
     .mainBlockBrokers {
-        margin-top: 10vh;
+        margin-top: 15vh;
         display: block !important;
         text-align: center;
         padding: 0 30px;
@@ -518,7 +522,7 @@
 
 }
 
-@media (max-width: 386px) {
+@media (max-width: 398px) {
 
     .aboutImage {
         max-width: 220px;
@@ -580,15 +584,30 @@
         width: 250px;
     }
 
+    .carriersDescription {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .carriers .mainButtonLearnMore {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 12px 38px;
+    }
+
+    .carriers .mainBlockBrokers {
+        margin-top: 17vh;
+    }
+
 }
 
 
-@media (min-height: 600px) and (min-width: 900px){
+@media (max-height: 900px) and (max-width: 1100px) {
     .mainBlock {
-        margin-top: 19vh;
+        margin-top: 22vh;
     }
 
-    .mainBlockBrokers{
-       margin-top: 15vh;
+    .mainBlockBrokers {
+        margin-top: 15vh;
     }
 }

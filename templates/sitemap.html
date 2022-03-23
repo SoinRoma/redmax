@@ -14,16 +14,16 @@
     <link rel="stylesheet" href="{% static 'js/toastr/toastr.css' %}">
     <link rel="stylesheet" href="{% static "css/animate.css" %}">
     <link rel="stylesheet" href="{% static "js/popup/magnific-popup.css" %}">
-    <link rel="stylesheet" href="{% static "css/style.css" %}?v=3">
-    <link rel="stylesheet" href="{% static "css/response.css" %}?v=3">
+    <link rel="stylesheet" href="{% static "css/style.css" %}?v=5">
+    <link rel="stylesheet" href="{% static "css/response.css" %}?v=5">
 
     <title>REDMAX - Sitemap</title>
 </head>
 <body>
 
 <section class="sitemap main">
-    <header class="header container">
-        <nav class="d-flex align-items-center justify-content-between">
+    <header class="header">
+        <nav class="container d-flex align-items-center justify-content-between">
             <a href="{% url 'index:index' %}" class="header-logo-redmax">
                 <img src="{% static "images/logos/logo.svg" %}" alt="logo">
             </a>
@@ -50,57 +50,70 @@
                         <img src="{% static "images/svg/inst.svg" %}" alt="insta">
                     </a>
                 </div>
-                <button href="#openModal" class="nav-button openModal" data-effect="mfp-zoom-in">
+                <button href="#openModal" class="nav-button openModal" id="callBack" data-effect="mfp-zoom-in">
                     Call back
                 </button>
+                <p class="mx-2 mb-0" id="timer-block" hidden>
+                    We`ll call you <span id="timer" class="text-danger"></span>
+                </p>
             </div>
         </nav>
     </header>
-    <div class="container mainBlock">
-        <h2 class="sitemap-title animate__animated animate__fadeInLeft">Sitemap</h2>
-        <div class="row sitemap-row animate__animated animate__fadeInLeft">
-            <div class=" col-sm-4 col-md-3 col-lg-2">
-                <ul class="p-0">
-                    <li class="nav-item"><a href="{% url 'index:index' %}" class="sitemap-main-text">Home page</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">About</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Why choose us?</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Statistics</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Call back</a></li>
-                </ul>
-            </div>
-            <div class=" col-sm-4 col-md-3 col-lg-2">
-                <ul class="p-0">
-                    <li class="nav-item"><a href="{% url 'brokers:broker' %}" class="sitemap-main-text">Brokers</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Services</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Why choose us?</a></li>
-                </ul>
-            </div>
-            <div class=" col-sm-4 col-md-3 col-lg-2">
-                <ul class="p-0">
-                    <li class="nav-item"><a href="{% url 'shippers:shipper' %}" class="sitemap-main-text">Shippers</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Services</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Advantages</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Questions?</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Call back</a></li>
-                </ul>
-            </div>
-            <div class=" col-sm-4 col-md-3 col-lg-2">
-                <ul class="p-0">
-                    <li class="nav-item"><a href="{% url 'carriers:carrier' %}" class="sitemap-main-text">Carriers</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Advantages</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Mobile app</a></li>
-                </ul>
-            </div>
-            <div class=" col-sm-4 col-md-3 col-lg-2">
-                <ul class="p-0">
-                    <li class="nav-item"><a href="{% url 'contact:contact' %}" class="sitemap-main-text">Contact</a></li>
-                    <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Any questions?</a></li>
-                    <li class="nav-item sitemapItem lastsiteMap"><a href="#" class="sitemap-text">Contact</a></li>
-                </ul>
+    <div class="container d-flex">
+        <div class="mainBlock w-100">
+            <h2 class="sitemap-title animate__animated animate__fadeInLeft">Sitemap</h2>
+            <div class="row sitemap-row animate__animated animate__fadeInLeft">
+                <div class=" col-sm-4 col-md-3 col-lg-2">
+                    <ul class="p-0">
+                        <li class="nav-item"><a href="{% url 'index:index' %}" class="sitemap-main-text">Home page</a>
+                        </li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">About</a></li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Why choose us?</a></li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Statistics</a></li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Call back</a></li>
+                    </ul>
+                </div>
+                <div class=" col-sm-4 col-md-3 col-lg-2">
+                    <ul class="p-0">
+                        <li class="nav-item"><a href="{% url 'brokers:broker' %}" class="sitemap-main-text">Brokers</a>
+                        </li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Services</a></li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Why choose us?</a></li>
+                    </ul>
+                </div>
+                <div class=" col-sm-4 col-md-3 col-lg-2">
+                    <ul class="p-0">
+                        <li class="nav-item"><a href="{% url 'shippers:shipper' %}"
+                                                class="sitemap-main-text">Shippers</a>
+                        </li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Services</a></li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Advantages</a></li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Questions?</a></li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Call back</a></li>
+                    </ul>
+                </div>
+                <div class=" col-sm-4 col-md-3 col-lg-2">
+                    <ul class="p-0">
+                        <li class="nav-item"><a href="{% url 'carriers:carrier' %}"
+                                                class="sitemap-main-text">Carriers</a>
+                        </li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Advantages</a></li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Mobile app</a></li>
+                    </ul>
+                </div>
+                <div class=" col-sm-4 col-md-3 col-lg-2">
+                    <ul class="p-0">
+                        <li class="nav-item"><a href="{% url 'contact:contact' %}" class="sitemap-main-text">Contact</a>
+                        </li>
+                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Any questions?</a></li>
+                        <li class="nav-item sitemapItem lastsiteMap"><a href="#" class="sitemap-text">Contact</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 <div id="openModal" class="white-popup white-popup__settings mfp-with-anim mfp-hide">
     <div class="popup-main">
         <div class="contactLeftModal">
@@ -109,7 +122,7 @@
                 Please let us know the nature of your inquiry
                 and we will get back to you shortly
             </p>
-            <form action="#" class="contactForm" id="CallBackCreateForm">
+            <form action="#" class="CallBackForm" id="CallBackCreateForm">
                 <div class="group">
                     <input type="text" id="nameModal" required autocomplete="off">
                     <label for="nameModal">Your name</label>
@@ -123,6 +136,14 @@
                 </button>
             </form>
         </div>
+
+        <div class="contactLeftModalSuccess" hidden>
+            <h2 class="contactTitle text-center">Sent <br> successfully!</h2>
+            <img class="d-flex m-auto" src="{% static 'images/svg/success.svg' %}" alt="success">
+            <button class="contactButtonModal mt-5" id="doneBtn">
+                Done
+            </button>
+        </div>
     </div>
 </div>
 
@@ -133,82 +154,98 @@
 <script src="{% static "js/popup/jquery.magnific-popup.min.js" %}"></script>
 <script src="{% static 'js/inputmask/input.mask.js' %}"></script>
 <script src="{% static 'js/toastr/toastr.js' %}"></script>
+<script src="{% static 'js/timer/timer.min.js' %}"></script>
 
 <script>
 
-    $(document).ready(function () {
-        $('.openModal').magnificPopup({
-            removalDelay: 500,
-            callbacks: {
-                beforeOpen: function () {
-                    this.st.mainClass = this.st.el.attr('data-effect');
-                }
-            },
-            midClick: true
-        });
-
-        $(".closeBtn").click(function () {
-            $.magnificPopup.close();
-        });
-    });
-
-        $("#phoneModal").inputmask({
-        "mask": "+1 (ddd) ddd-dddd"
-    });
-
-
-    $("#CallBackCreateForm").submit(function (event) {
-
-        event.preventDefault();
-        let requestData = new FormData();
-        requestData.append('name', $('#nameModal').val());
-        requestData.append('phone', $('#phoneModal').val());
-
-        const submitBtn = document.getElementById('submitBtn');
-        submitBtn.disabled = true;
-
-
-        let url = "{% url 'call_back:create' %}";
-        $.ajax({
-            headers: {"X-CSRFToken": "{{csrf_token}}"},
-            url: url,
-            processData: false,
-            contentType: false,
-            method: 'POST',
-            data: requestData,
-            success: function (data) {
-                toastr.success(
-                    'YOUR REQUEST HAS BEEN\n' +
-                    'SENT SUCCESSFULLY!',
-                    'Success',
-                    {
-                        positionClass: "toast-top-center",
-                        timeOut: 2000,
-                        fadeOut: 1000,
-                    }
-                );
-
-                $('#CallBackCreateForm')[0].reset();
-                submitBtn.disabled = false;
-
-            },
-            error: function (data) {
-                toastr.error(
-                    data.responseText,
-                    'Error',
-                    {
-                        positionClass: "toast-top-center",
-                        timeOut: 2000,
-                        fadeOut: 1000,
-                    }
-                );
-                submitBtn.disabled = false;
+   $(document).ready(function () {
+      $('.openModal').magnificPopup({
+         removalDelay: 500,
+         callbacks: {
+            beforeOpen: function () {
+               this.st.mainClass = this.st.el.attr('data-effect');
             }
+         },
+         midClick: true
+      });
+
+      $(".closeBtn").click(function () {
+         $.magnificPopup.close();
+         $('.contactLeftModal').show();
+         $(".contactLeftModalSuccess").prop("hidden", !this.checked);
+      });
+
+      $("#doneBtn").click(function () {
+         $.magnificPopup.close();
+         $('.contactLeftModal').show();
+         $(".contactLeftModalSuccess").prop("hidden", !this.checked);
+      });
+   });
+
+   $("#phoneModal").inputmask({
+      "mask": "+1 (ddd) ddd-dddd"
+   });
+
+   $(window).scroll(function () {
+      if ($(window).scrollTop() === 0) {
+         $('.header').css("background-color", "transparent");
+      } else {
+         $('.header').css("background-color", "white");
+      }
+   });
 
 
-        });
+   $("#CallBackCreateForm").submit(function (event) {
 
-    });
+      event.preventDefault();
+      let requestData = new FormData();
+      requestData.append('name', $('#nameModal').val());
+      requestData.append('phone', $('#phoneModal').val());
+
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
+
+      let url = "{% url 'call_back:create' %}";
+      $.ajax({
+         headers: {"X-CSRFToken": "{{csrf_token}}"},
+         url: url,
+         processData: false,
+         contentType: false,
+         method: 'POST',
+         data: requestData,
+         success: function (data) {
+            //Сбрасывание формы и отключение кнопки
+            $('#CallBackCreateForm')[0].reset();
+            submitBtn.disabled = false;
+
+            // Изменение модального окна и включение таймера
+            $('.contactLeftModal').hide();
+            $('.contactLeftModalSuccess').removeAttr('hidden');
+            $("#callBack").prop("hidden", !this.checked);
+            $('#timer-block').removeAttr('hidden');
+            $("#timer").html('0:00');
+
+            let timer = new easytimer.Timer();
+            timer.start();
+            timer.addEventListener("secondsUpdated", function (e) {
+               $("#timer").html(timer.getTimeValues().toString().slice(4));
+            });
+
+         },
+         error: function (data) {
+            toastr.error(
+               data.responseText,
+               'Error',
+               {
+                  positionClass: "toast-top-center",
+                  timeOut: 2000,
+                  fadeOut: 1000,
+               }
+            );
+            submitBtn.disabled = false;
+         }
+      });
+   });
 
 
 </script>

@@ -1,12 +1,9 @@
 $('.counter1').counterUp({
-    delay: 10,
-    time: 5000
+    time: 15000
 });
 $('.counter2').counterUp({
-    delay: 10,
-    time: 5000
+    time: 15000
 });
 $('.counter3').counterUp({
-    delay: 10,
-    time: 5000
+    time: 15000
 });

@@ -94,9 +94,17 @@
     .app-row {
         display: block;
     }
+
+    .mainText {
+        margin-right: 106px;
+    }
 }
 
 @media (max-width: 958px) {
+
+    .leftMain {
+        display: none;
+    }
 
     .mainBlock {
         margin-top: 20vh !important;
@@ -131,6 +139,10 @@
 
     .mainButtonLearnMore {
         margin-bottom: 20px;
+    }
+
+    .main .mainButtonLearnMore {
+        margin-bottom: 0;
     }
 
 
@@ -520,6 +532,21 @@
         width: 75%;
     }
 
+}
+
+@media (max-width: 449px) {
+    .main .mainButtonLearnMore {
+        margin-bottom: 20px;
+    }
+
+    .mainButtonLearnMore {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .mainButtonContactUs {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 398px) {

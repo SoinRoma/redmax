@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="{% static "js/popup/magnific-popup.css" %}">
     <link rel="stylesheet" href="{% static 'js/toastr/toastr.css' %}">
     <link rel="stylesheet" href="{% static "css/animate.css" %}">
-    <link rel="stylesheet" href="{% static "css/style.css" %}?v=5">
-    <link rel="stylesheet" href="{% static "css/response.css" %}?v=5">
+    <link rel="stylesheet" href="{% static "css/style.css" %}?v=7">
+    <link rel="stylesheet" href="{% static "css/response.css" %}?v=7">
     <title>REDMAX</title>
 </head>
 <body>
@@ -43,10 +43,10 @@
                 </ul>
                 <div class="header-social">
                     <a href="#">
-                        <img src="{% static "images/svg/fb.svg" %}" alt="fb" class="mr-3">
+                        <div class="fb mr-3"></div>
                     </a>
                     <a href="#">
-                        <img src="{% static "images/svg/inst.svg" %}" alt="insta">
+                        <div class="fb mr-3"></div>
                     </a>
                 </div>
                 <button href="#openModal" class="nav-button openModal" id="callBack" data-effect="mfp-zoom-in">
@@ -57,19 +57,21 @@
             </div>
         </nav>
     </header>
-    <div class="container d-flex">
-        <div class="mainLeft p-0 mainBlock"></div>
+    <div class="container d-flex justify-content-between">
+        <div class=" p-0 mainBlock leftMain" style="opacity: 0">
+                <img src="{% static "images/logos/logo.svg" %}" alt="logo">
+        </div>
         <div class=" mainText p-0 mainBlock">
             <img src="{% static "images/logos/LogoFull.svg" %}" alt="LogoFull"
-                 class="animate__animated animate__fadeInLeft">
-            <p class="mainDescription  animate__animated animate__fadeInLeft">
+                 class="wow  animate__animated animate__fadeInLeft">
+            <p class="mainDescription wow  animate__animated animate__fadeInLeft">
                 Redmax is a leading supply chain management company.
                 Our expertise lies in designing and implementing solutions that help
                 our customers to reduce their costs, improve efficiency, and manage risk.
             </p>
-            <div class="mainButtons animate__animated animate__fadeInLeft">
+            <div class="mainButtons wow animate__animated animate__fadeInLeft">
                 <a href="#" class="btn w-100 mainButtonLearnMore">
-                    Learn more
+                    Sign up
                 </a>
                 <a class="btn w-100 mainButtonContactUs">
                     Contact us
@@ -105,7 +107,8 @@
                     to get it done in a way that leaves customers more than satisfied
                 </p>
             </div>
-            <img src="{% static "images/svg/LogoGray.svg" %}" alt="LogoGray" class="LogoGray">
+            <img src="{% static "images/svg/LogoGray.svg" %}" alt="LogoGray"
+                 class="LogoGray wow  animate__animated animate__fadeInLeft">
         </div>
         <div class="col-12 col-xl-6 aboutRight">
             <div class="rowBlock">
@@ -178,7 +181,7 @@
     <div class="blockLineReverseRight">
         <span class="lineReverseRight"></span>
     </div>
-    <div class="whyContent">
+    <div class="whyContent wow  animate__animated animate__fadeInUp">
         <div class="row">
             <div class="why-item col-12 col-md-6 mb-3">
                 <img src="{% static "images/svg/icon1.svg" %}" alt="" class="why-icon">
@@ -279,22 +282,22 @@
 </section>
 
 <footer class="footer">
-    <div class="blockLine contactLine">
+    <div class="blockLine contactLine wow  animate__animated animate__fadeInLeft">
         <span class="line"></span>
         <img src="{% static "images/svg/lineArrow.svg" %}" alt="lineArrow" class="lineArrow">
     </div>
     <div class="footer-row container">
         <div class="first-footer">
             <img src="{% static "images/logos/logo.svg" %}" alt="logo">
+            <p class="footer-license">
+                Redmax Logistics, LLC,
+                © All rights reserved, Last Modified 2022
+            </p>
             <p class="powered">
                 Powered by:
                 <a target="_blank" href="https://altek.icu/">
                     <img class="altek" src="{% static "images/logos/altek.svg" %}" alt="ALTEK">
                 </a>
-            </p>
-            <p class="footer-license">
-                Redmax Logistics, LLC,
-                © All rights reserved, Last Modified 2022
             </p>
         </div>
         <div class="second-footer">
@@ -328,10 +331,10 @@
             </div>
             <div class="footer-social">
                 <a href="{{ contact.facebook_link }}">
-                    <img src="{% static "images/svg/fb.svg" %}" alt="fb" class="mr-3">
+                    <div class="fb mr-3"></div>
                 </a>
                 <a href="{{ contact.instagram_link }}">
-                    <img src="{% static "images/svg/inst.svg" %}" alt="insta">
+                    <div class="insta mr-3"></div>
                 </a>
             </div>
             <p class="footer-license2">
@@ -387,7 +390,7 @@
 <script src="{% static "js/bootstrap/popper.min.js" %}"></script>
 <script src="{% static "js/counter/waypoints.min.js" %}"></script>
 <script src="{% static "js/counter/jquery.counterup.min.js" %}"></script>
-<script src="{% static "js/counter/main.js" %}"></script>
+<script src="{% static "js/counter/main.js" %}?v=7"></script>
 <script src="{% static "js/burger/main.js" %}"></script>
 <script src="{% static "js/carousel/owl.carousel.min.js" %}"></script>
 <script src="{% static "js/carousel/main.js" %}"></script>
@@ -395,8 +398,12 @@
 <script src="{% static 'js/inputmask/input.mask.js' %}"></script>
 <script src="{% static 'js/toastr/toastr.js' %}"></script>
 <script src="{% static 'js/timer/timer.min.js' %}"></script>
+<script src="{% static 'js/wow/wow.min.js' %}"></script>
 
 <script>
+
+   // Анимация на сайте
+   new WOW().init();
 
    $(document).ready(function () {
       $('.openModal').magnificPopup({
@@ -422,11 +429,17 @@
       });
    });
 
+   if ($(window).scrollTop() === 0) {
+      $('.header').css("background-color", "transparent");
+   } else {
+      $('.header').css("background-color", "white");
+   }
+
    $(window).scroll(function () {
       if ($(window).scrollTop() === 0) {
-         $('.header').css("background-color","transparent");
+         $('.header').css({"background-color": "transparent", "transition": "background 1.0s ease"});
       } else {
-         $('.header').css("background-color","white");
+         $('.header').css({"background-color": "white", "transition": "background 1.0s ease"});
       }
    });
 

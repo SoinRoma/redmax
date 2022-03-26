@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="{% static 'js/toastr/toastr.css' %}">
     <link rel="stylesheet" href="{% static "css/animate.css" %}">
     <link rel="stylesheet" href="{% static "js/popup/magnific-popup.css" %}">
-    <link rel="stylesheet" href="{% static "css/style.css" %}?v=5">
-    <link rel="stylesheet" href="{% static "css/response.css" %}?v=5">
+    <link rel="stylesheet" href="{% static "css/style.css" %}?v=7">
+    <link rel="stylesheet" href="{% static "css/response.css" %}?v=7">
 
     <title>REDMAX - Sitemap</title>
 </head>
@@ -44,10 +44,10 @@
                 </ul>
                 <div class="header-social">
                     <a href="#">
-                        <img src="{% static "images/svg/fb.svg" %}" alt="fb" class="mr-3">
+                        <div class="fb mr-3"></div>
                     </a>
                     <a href="#">
-                        <img src="{% static "images/svg/inst.svg" %}" alt="insta">
+                        <div class="fb mr-3"></div>
                     </a>
                 </div>
                 <button href="#openModal" class="nav-button openModal" id="callBack" data-effect="mfp-zoom-in">
@@ -155,8 +155,12 @@
 <script src="{% static 'js/inputmask/input.mask.js' %}"></script>
 <script src="{% static 'js/toastr/toastr.js' %}"></script>
 <script src="{% static 'js/timer/timer.min.js' %}"></script>
+<script src="{% static 'js/wow/wow.min.js' %}"></script>
 
 <script>
+
+   // Анимация на сайте
+   new WOW().init();
 
    $(document).ready(function () {
       $('.openModal').magnificPopup({
@@ -186,11 +190,17 @@
       "mask": "+1 (ddd) ddd-dddd"
    });
 
+   if ($(window).scrollTop() === 0) {
+      $('.header').css("background-color", "transparent");
+   } else {
+      $('.header').css("background-color", "white");
+   }
+
    $(window).scroll(function () {
       if ($(window).scrollTop() === 0) {
-         $('.header').css("background-color", "transparent");
+         $('.header').css({"background-color": "transparent", "transition": "background 1.0s ease"});
       } else {
-         $('.header').css("background-color", "white");
+         $('.header').css({"background-color": "white", "transition": "background 1.0s ease"});
       }
    });
 

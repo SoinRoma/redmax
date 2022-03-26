@@ -53,7 +53,7 @@ button:focus {
 .nav-link {
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 18px;
     color: #000000;
     letter-spacing: 1px;
@@ -61,6 +61,7 @@ button:focus {
 
 .nav-link:hover {
     color: #FF0000;
+    transition: color 0.5s ease;
 }
 
 .nav-list {
@@ -92,10 +93,6 @@ button:focus {
     cursor: pointer;
 }
 
-.nav-button:hover {
-    color: #FFF;
-    background-color: #FF0000;
-}
 
 #timer-block {
     font-size: 15px;
@@ -136,9 +133,13 @@ button:focus {
     margin-top: 30vh;
 }
 
+.leftMain{
+    opacity: 0;
+}
+
 .mainText {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 6%;
+    margin-right: 156px;
     max-width: 600px;
 }
 
@@ -165,6 +166,12 @@ button:focus {
     border: none;
     margin-right: 20px;
     cursor: pointer;
+    max-width: 185px;
+}
+
+.mainButtonLearnMore:hover {
+    background: #F46060;
+    transition: background 0.5s ease;
 }
 
 .mainButtonLearnMore:hover {
@@ -183,6 +190,7 @@ button:focus {
     padding: 15px 48px;
     border: 1px solid #FF0000;
     cursor: pointer;
+    max-width: 185px;
 }
 
 .mainButtonContactUs:hover {
@@ -557,6 +565,11 @@ input:focus ~ label, input:valid ~ label {
     cursor: pointer;
 }
 
+.contactButton:hover {
+    background: #F46060;
+    transition: background 0.5s ease;
+}
+
 .contactButtonModal {
     font-style: normal;
     font-weight: 400;
@@ -570,6 +583,11 @@ input:focus ~ label, input:valid ~ label {
     margin-right: 20px;
     cursor: pointer;
     width: 100%;
+}
+
+.contactButtonModal:hover {
+    background: #F46060;
+    transition: background 0.5s ease;
 }
 
 .contactRight img {
@@ -675,12 +693,36 @@ input:focus ~ label, input:valid ~ label {
 }
 
 .powered {
-    bottom: 20px;
+    margin: 0;
     color: grey;
 }
 
 .altek {
     margin-left: 10px;
+}
+
+.fb {
+    background-image: url("../images/svg/fb.svg");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 41px;
+}
+
+.fb:hover {
+    background: url("../images/svg/fbHover.svg");
+    transition: background 0.9s ease;
+}
+
+.insta {
+    background-image: url("../images/svg/inst.svg");
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 41px;
+}
+
+.insta:hover {
+    background: url("../images/svg/instHover.svg");
+    transition: background 0.9s ease;
 }
 
 
@@ -774,12 +816,6 @@ input:focus ~ label, input:valid ~ label {
     border: 1px solid #FF0000;
     cursor: pointer;
     width: 190px;
-}
-
-.service-btn:hover {
-    color: #FFFFFF;
-    background: #FF0000;
-    border: 1px solid #FF0000;
 }
 
 

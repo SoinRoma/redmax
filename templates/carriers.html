@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="{% static 'js/toastr/toastr.css' %}">
     <link rel="stylesheet" href="{% static "css/animate.css" %}">
     <link rel="stylesheet" href="{% static "js/popup/magnific-popup.css" %}">
-    <link rel="stylesheet" href="{% static "css/style.css" %}?v=5">
-    <link rel="stylesheet" href="{% static "css/response.css" %}?v=5">
+    <link rel="stylesheet" href="{% static "css/style.css" %}?v=7">
+    <link rel="stylesheet" href="{% static "css/response.css" %}?v=7">
 
     <title>REDMAX - Carriers</title>
 </head>
@@ -43,16 +43,17 @@
                 </ul>
                 <div class="header-social">
                     <a href="#">
-                        <img src="{% static "images/svg/fb.svg" %}" alt="fb" class="mr-3">
+                        <div class="fb mr-3"></div>
                     </a>
                     <a href="#">
-                        <img src="{% static "images/svg/inst.svg" %}" alt="insta">
+                        <div class="fb mr-3"></div>
                     </a>
                 </div>
                 <button href="#openModal" class="nav-button openModal" id="callBack" data-effect="mfp-zoom-in">
                     Call back
                 </button>
-                <p class="mx-2 mb-0" id="timer-block" hidden>We`ll call you <span id="timer" class="text-danger"></span></p>
+                <p class="mx-2 mb-0" id="timer-block" hidden>We`ll call you <span id="timer" class="text-danger"></span>
+                </p>
             </div>
         </nav>
     </header>
@@ -72,7 +73,7 @@
                 between co-workers lead towards better customer service while meeting deadlines on time each day
             </p>
             <a href="#" class="btn w-100 mainButtonLearnMore animate__animated animate__fadeInLeft">
-                Learn more
+                Sign up
             </a>
         </div>
     </div>
@@ -90,7 +91,7 @@
     <div class="blockLineReverseRight">
         <span class="lineReverseRight"></span>
     </div>
-    <div class="advantagesContent">
+    <div class="advantagesContent wow  animate__animated animate__fadeInUp">
         <div class="row">
             <div class="advantages-item col-12 col-md-6 mb-3">
                 <img src="{% static "images/svg/icon11.svg" %}" alt="advantage1" class="advantages-icon">
@@ -160,28 +161,28 @@
                     </a>
                 </div>
             </div>
-            <img src="{% static "images/img/phone.png" %}" alt="phone" class="phone">
+            <img src="{% static "images/img/phone.png" %}" alt="phone" class="phone wow  animate__animated animate__fadeInUp">
         </div>
     </div>
 </section>
 
 <footer class="footer">
-    <div class="blockLine contactLine">
+    <div class="blockLine contactLine wow  animate__animated animate__fadeInLeft">
         <span class="line"></span>
         <img src="{% static "images/svg/lineArrow.svg" %}" alt="lineArrow" class="lineArrow">
     </div>
     <div class="footer-row container">
         <div class="first-footer">
             <img src="{% static "images/logos/logo.svg" %}" alt="logo">
-            <p class="powered">
+            <p class="footer-license">
+                Redmax Logistics, LLC,
+                © All rights reserved, Last Modified 2022
+            </p>
+             <p class="powered">
                 Powered by:
                 <a target="_blank" href="https://altek.icu/">
                     <img class="altek" src="{% static "images/logos/altek.svg" %}" alt="ALTEK">
                 </a>
-            </p>
-            <p class="footer-license">
-                Redmax Logistics, LLC,
-                © All rights reserved, Last Modified 2022
             </p>
         </div>
         <div class="second-footer">
@@ -215,10 +216,10 @@
             </div>
             <div class="footer-social">
                 <a href="{{ contact.facebook_link }}">
-                    <img src="{% static "images/svg/fb.svg" %}" alt="fb" class="mr-3">
+                    <div class="fb mr-3"></div>
                 </a>
                 <a href="{{ contact.instagram_link }}">
-                    <img src="{% static "images/svg/inst.svg" %}" alt="insta">
+                    <div class="insta mr-3"></div>
                 </a>
             </div>
             <p class="footer-license2">
@@ -276,10 +277,14 @@
 <script src="{% static 'js/inputmask/input.mask.js' %}"></script>
 <script src="{% static 'js/toastr/toastr.js' %}"></script>
 <script src="{% static 'js/timer/timer.min.js' %}"></script>
+<script src="{% static 'js/wow/wow.min.js' %}"></script>
 
 <script>
 
-    $(document).ready(function () {
+    // Анимация на сайте
+   new WOW().init();
+
+   $(document).ready(function () {
       $('.openModal').magnificPopup({
          removalDelay: 500,
          callbacks: {
@@ -304,19 +309,25 @@
    });
 
 
-    $("#phoneModal").inputmask({
-        "mask": "+1 (ddd) ddd-dddd"
-    });
+   $("#phoneModal").inputmask({
+      "mask": "+1 (ddd) ddd-dddd"
+   });
 
-     $(window).scroll(function () {
+   if ($(window).scrollTop() === 0) {
+      $('.header').css("background-color", "transparent");
+   } else {
+      $('.header').css("background-color", "white");
+   }
+
+   $(window).scroll(function () {
       if ($(window).scrollTop() === 0) {
-         $('.header').css("background-color","transparent");
+         $('.header').css({"background-color": "transparent", "transition": "background 1.0s ease"});
       } else {
-         $('.header').css("background-color","white");
+         $('.header').css({"background-color": "white", "transition": "background 1.0s ease"});
       }
    });
 
-    $("#CallBackCreateForm").submit(function (event) {
+   $("#CallBackCreateForm").submit(function (event) {
 
       event.preventDefault();
       let requestData = new FormData();
@@ -344,12 +355,12 @@
             $('.contactLeftModalSuccess').removeAttr('hidden');
             $("#callBack").prop("hidden", !this.checked);
             $('#timer-block').removeAttr('hidden');
-             $("#timer").html('0:00');
+            $("#timer").html('0:00');
 
             let timer = new easytimer.Timer();
             timer.start();
             timer.addEventListener("secondsUpdated", function (e) {
-               $("#timer").html( timer.getTimeValues().toString().slice(4) );
+               $("#timer").html(timer.getTimeValues().toString().slice(4));
             });
 
          },
@@ -368,57 +379,57 @@
       });
    });
 
-    $("#EmailCreateForm").submit(function (event) {
+   $("#EmailCreateForm").submit(function (event) {
 
-        event.preventDefault();
-        let requestData = new FormData();
-        requestData.append('email', $('#email').val());
+      event.preventDefault();
+      let requestData = new FormData();
+      requestData.append('email', $('#email').val());
 
-        const submitBtn = document.getElementById('submitBtn');
-        submitBtn.disabled = true;
-
-
-        let url = "{% url 'questions:create_email' %}";
-        $.ajax({
-            headers: {"X-CSRFToken": "{{csrf_token}}"},
-            url: url,
-            processData: false,
-            contentType: false,
-            method: 'POST',
-            data: requestData,
-            success: function (data) {
-                toastr.success(
-                    'YOUR REQUEST HAS BEEN\n' +
-                    'SENT SUCCESSFULLY!',
-                    'Success',
-                    {
-                        positionClass: "toast-top-center",
-                        timeOut: 2000,
-                        fadeOut: 1000,
-                    }
-                );
-
-                $('#contactForm')[0].reset();
-                submitBtn.disabled = false;
-
-            },
-            error: function (data) {
-                toastr.error(
-                    data.responseText,
-                    'Error',
-                    {
-                        positionClass: "toast-top-center",
-                        timeOut: 2000,
-                        fadeOut: 1000,
-                    }
-                );
-                submitBtn.disabled = false;
-            }
+      const submitBtn = document.getElementById('submitBtn');
+      submitBtn.disabled = true;
 
 
-        });
+      let url = "{% url 'questions:create_email' %}";
+      $.ajax({
+         headers: {"X-CSRFToken": "{{csrf_token}}"},
+         url: url,
+         processData: false,
+         contentType: false,
+         method: 'POST',
+         data: requestData,
+         success: function (data) {
+            toastr.success(
+               'YOUR REQUEST HAS BEEN\n' +
+               'SENT SUCCESSFULLY!',
+               'Success',
+               {
+                  positionClass: "toast-top-center",
+                  timeOut: 2000,
+                  fadeOut: 1000,
+               }
+            );
 
-    });
+            $('#contactForm')[0].reset();
+            submitBtn.disabled = false;
+
+         },
+         error: function (data) {
+            toastr.error(
+               data.responseText,
+               'Error',
+               {
+                  positionClass: "toast-top-center",
+                  timeOut: 2000,
+                  fadeOut: 1000,
+               }
+            );
+            submitBtn.disabled = false;
+         }
+
+
+      });
+
+   });
 
 
 </script>

@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'shippers',
     'contact',
     'sitemap',
+    'order'
 
 ]
 

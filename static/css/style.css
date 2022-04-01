@@ -3,6 +3,14 @@ body {
     background-color: #FBFBFB;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
 .container {
     max-width: 1280px;
     width: 90%;
@@ -133,7 +141,7 @@ button:focus {
     margin-top: 30vh;
 }
 
-.leftMain{
+.leftMain {
     opacity: 0;
 }
 
@@ -515,7 +523,7 @@ button:focus {
     margin-bottom: 45px;
 }
 
-input {
+.group input {
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display: block;
@@ -1201,4 +1209,316 @@ input:focus ~ label, input:valid ~ label {
 .mfp-close-btn-in .white-popup.white-popup__messages .mfp-close {
     color: #ffffff;
     top: 3px;
+}
+
+
+/*-------------SIGN UP MODAL--------*/
+
+.sign-modal {
+    max-width: 560px;
+}
+
+.sign2-modal {
+    max-width: 715px;
+}
+
+.contactSingUpModal {
+    max-width: 437px;
+}
+
+.form-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.form-item .form-control {
+    width: 100%;
+    font-size: 15px;
+    height: 65px;
+    border: 1px solid #d9d9d9;
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.form-item .form-control-input {
+    padding: 0 45px;
+}
+
+.form-item i.icons {
+    position: absolute;
+    bottom: 50%;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+    left: 22px;
+    color: #7e7e7e;
+}
+
+
+.icon-from:before {
+    content: "\e902";
+}
+
+.form-item .bootstrap-select > .dropdown-toggle {
+    color: #6a7179;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 0 45px;
+    align-items: center;
+    background-color: #ffffff !important;
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.form-item .bootstrap-select .dropdown-toggle .filter-option {
+    display: flex;
+    align-items: center;
+    outline: none !important;
+}
+
+.form-group .bootstrap-select > .dropdown-toggle {
+    color: #6a7179;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 0 45px;
+    align-items: center;
+    background-color: #ffffff !important;
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.form-group .bootstrap-select .dropdown-toggle .filter-option {
+    display: flex;
+    align-items: center;
+    outline: none !important;
+}
+
+.form-group .form-control.start-form__textarea {
+    height: 150px;
+    background: #FEFEFE;
+    border: 1px solid #E2E2E2;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    resize: none;
+}
+
+.form-group label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    position: inherit;
+}
+
+.popup-main .form-control {
+    height: 55px;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+
+.form-group .bootstrap-select.start-form__select .dropdown-toggle {
+    height: 55px;
+    background: #FEFEFE;
+    border: 1px solid #E2E2E2;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none !important;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+}
+
+.form-group .weight-group {
+    width: 100%;
+    height: auto;
+    background: #FEFEFE;
+    border: 1px solid #E2E2E2;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px 10px 0 10px;
+}
+
+.dimensions-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.dimensions-item__inputs {
+    width: 100%;
+}
+
+.dimensions-item__label {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 45px;
+    flex: 0 0 45px;
+    max-width: 45px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.cub-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin: 0 -5px;
+}
+
+.cub-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    padding: 0 5px;
+}
+
+.cub-input {
+    width: 100%;
+    height: 45px;
+    background: #F2F2F2;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.form-group .quantity-group {
+    height: 65px;
+    width: 100%;
+    background: #FEFEFE;
+    border: 1px solid #E2E2E2;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0 15px;
+}
+
+.quantity-btn {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 45px;
+    flex: 0 0 45px;
+    width: 45px;
+    height: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #7E7E7E;
+    font-size: 21px;
+}
+
+.quantity-input {
+    width: 100%;
+    height: 45px;
+    background: #F2F2F2;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.popup-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.popup-title h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.pac-container {
+    z-index: 99999;
+}
+.popup-main .last-group span#totalPrice p {
+    font-size: 17px;
+    padding: 0 16px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.popup-main .last-group span#totalPrice  {
+    font-size: 17px;
+    padding: 0 16px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.popup-main .last-group {
+    text-align: center;
+}
+
+.popup-main .last-group span#totalPrice p a {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.popup-main .loader {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+}
+
+.popup-main .loader .loader-image img {
+    width: 64px;
+}
+
+.popup-main .loader.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }

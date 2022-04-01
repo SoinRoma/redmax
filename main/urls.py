@@ -24,6 +24,6 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('shippers/', include('shippers.urls')),
     path('sitemap/', include('sitemap.urls')),
-
+    path('order/', include('order.urls')),
     path('api/', include('api.urls')),
 ]

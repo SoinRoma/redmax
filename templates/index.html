@@ -1,4 +1,5 @@
 {% load static %}
+{% load contact %}
 
 <!doctype html>
 <html lang="en">
@@ -10,16 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,400&family=Open+Sans:wght@300&display=swap"
           rel="stylesheet">
     <link rel="icon" href="{% static "images/logos/favicon.svg" %}">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
     <link rel="stylesheet" href="{% static "css/bootstrap/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap-select.min.css' %}">
     <link rel="stylesheet" href="{% static "js/carousel/owl.carousel.min.css" %}">
     <link rel="stylesheet" href="{% static "js/popup/magnific-popup.css" %}">
     <link rel="stylesheet" href="{% static 'js/toastr/toastr.css' %}">
     <link rel="stylesheet" href="{% static "css/animate.css" %}">
-    <link rel="stylesheet" href="{% static "css/style.css" %}?v=7">
-    <link rel="stylesheet" href="{% static "css/response.css" %}?v=7">
+    <link rel="stylesheet" href="{% static "css/style.css" %}?v=8">
+    <link rel="stylesheet" href="{% static "css/response.css" %}?v=8">
     <title>REDMAX</title>
 </head>
 <body>
+
+{% get_last_contact as contact %}
+{% get_packaging_list as packaging_list %}
 
 <section class="main">
     <header class="header">
@@ -59,7 +65,7 @@
     </header>
     <div class="container d-flex justify-content-between">
         <div class=" p-0 mainBlock leftMain" style="opacity: 0">
-                <img src="{% static "images/logos/logo.svg" %}" alt="logo">
+            <img src="{% static "images/logos/logo.svg" %}" alt="logo">
         </div>
         <div class=" mainText p-0 mainBlock">
             <img src="{% static "images/logos/LogoFull.svg" %}" alt="LogoFull"
@@ -70,10 +76,11 @@
                 our customers to reduce their costs, improve efficiency, and manage risk.
             </p>
             <div class="mainButtons wow animate__animated animate__fadeInLeft">
-                <a href="#" class="btn w-100 mainButtonLearnMore">
+                <a href="#signUp" class="btn w-100 mainButtonLearnMore signUp" id="signUpModal"
+                   data-effect="mfp-zoom-in">
                     Sign up
                 </a>
-                <a class="btn w-100 mainButtonContactUs">
+                <a href="tel: {{ contact.phone }}" class="btn w-100 mainButtonContactUs">
                     Contact us
                 </a>
             </div>
@@ -82,7 +89,7 @@
     </div>
 </section>
 
-<section class="about container">
+<section id="section-about" class="about container">
     <div class="d-flex align-items-center">
         <img src="{% static "images/logos/favicon.svg" %}" alt="arrow">
         <h2 class="aboutTitle">About</h2>
@@ -169,7 +176,7 @@
     </div>
 </section>
 
-<section class="why container">
+<section id="section-why" class="why container">
     <div class="d-flex">
         <h2 class="whyTitle">Why Choose Us?</h2>
         <img src="{% static "images/logos/favicon.svg" %}" alt="arrow" class="why-arrow">
@@ -231,7 +238,7 @@
     </div>
 </section>
 
-<section class="stat">
+<section id="section-stat" class="stat">
     <div class="stat-row container">
         <div class="stat-item">
             <div class="stat-number "><span class="counter1">89</span> %</div>
@@ -249,7 +256,7 @@
     <img src="{% static "images/svg/LogoStat.svg" %}" alt="LogoStat" class="LogoStat">
 </section>
 
-<section class="contact container">
+<section id="section-contact" class="contact container">
     <div class="contactContent">
         <div class="contactLeft">
             <h2 class="contactTitle">Interested?</h2>
@@ -322,7 +329,7 @@
         </div>
         <div class="third-footer">
             <div>
-                <a href="tel: {{ contact.phone }}" class="footer-phone">
+                <a href="tel: {{ contact.phone }}" class="footer-phone" data-phone="{{ contact.phone }}">
                     {{ contact.phone }}
                 </a>
                 <p class="footer-address">
@@ -384,13 +391,189 @@
     </div>
 </div>
 
+<div id="signUp" class="sign-modal white-popup white-popup__settings mfp-with-anim mfp-hide">
+    <div class="popup-main">
+        <div class="contactSingUpModal">
+            <h2 class="contactTitle">ORDER REQUEST</h2>
+            <form action="#" class="CallBackForm" id="CallBackCreateForm">
+                <div class="form-item">
+                    <input id="addressFrom" name="addressFrom" type="text"
+                           class="form-control form-control-input required"
+                           placeholder="Pickup ZIP Code">
+                    <i class="icons icon-from"></i>
+                </div>
+                <div class="form-item">
+                    <input id="addressTo" name="addressTo" type="text" class="form-control form-control-input required"
+                           placeholder="Destination ZIP Code">
+                    <i class="icons icon-from"></i>
+                </div>
+                <div class="form-item">
+                    <select id="pickup" name="pickup" class="selectpicker form-control start-form__input"
+                            title="Truck size">
+                        {% for pickup in pickup_list %}
+                            <option value="{{ pickup.id }}"
+                                    data-name="{{ pickup.name }}">{{ pickup.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="form-item">
+                    <select id="delivery" name="delivery"
+                            class="selectpicker form-control start-form__input"
+                            title="Delivery services" multiple>
+                        {% for delivery in delivery_list %}
+                            <option value="{{ delivery.id }}">{{ delivery.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button href="#signUp2" class="contactButtonModal signUp2" id="submitBtn">
+                    Continue
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="signUp2" class="sign2-modal white-popup white-popup__step2 mfp-with-anim mfp-hide">
+    <div class="popup-main">
+        <form id="openStep2Form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="loading_date">Requested loading date <span class="red">*</span></label>
+                        <input id="loading_date" name="loading_date" type="date" class="form-control required"
+                               placeholder="MM / DD / YY" lang="en" min="{% now "Y-m-d" %}">
+                    </div>
+                    <div class="form-group">
+                        <label for="packaging">Packaging</label>
+                        <select id="packaging" name="packaging" class="selectpicker start-form__select"
+                                title="packaging">
+                            {% for packaging in packaging_list %}
+                                <option
+                                        value="{{ packaging.id }}"
+                                        data-length="{{ packaging.length | default_if_none:"" }}"
+                                        data-width="{{ packaging.width | default_if_none:"" }}"
+                                        data-height="{{ packaging.height | default_if_none:"" }}"
+                                        data-weight="{{ packaging.weight | default_if_none:"" }}"
+                                > {{ packaging.name }} {% if packaging.length %} ({{ packaging.length }}
+                                    {% if packaging.width %}X {{ packaging.width }}{% endif %} {% if packaging.height %}
+                                        X {{ packaging.height }}{% endif %}){% endif %}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Dimensions (LxWxH), weight </label>
+                        <div class="weight-group">
+                            <div class="dimensions-item">
+                                <div class="dimensions-item__inputs">
+                                    <div class="cub-row">
+                                        <div class="cub-item">
+                                            <input type="text" id="cubL" name="cub_l" class="cub-input" placeholder="L">
+                                        </div>
+                                        <div class="cub-item">
+                                            <input type="text" id="cubW" name="cub_w" class="cub-input" placeholder="W">
+                                        </div>
+                                        <div class="cub-item">
+                                            <input type="text" id="cubH" name="cub_h" class="cub-input" placeholder="H">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dimensions-item__label">
+                                    <span>in.</span>
+                                </div>
+                            </div>
+                            <div class="dimensions-item">
+                                <div class="dimensions-item__inputs">
+                                    <input type="text" id="weight" name="weight" class="cub-input" placeholder="Weight">
+                                </div>
+                                <div class="dimensions-item__label">
+                                    <span>lbs.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mb-md-0">
+                        <label for="">Quantity</label>
+                        <div class="quantity-group">
+                            <a href="#" id="decrement" class="quantity-btn">-</a>
+                            <input type="number" id="quantity" class="quantity-input" value="0" min="0">
+                            <a href="#" id="increment" class="quantity-btn">+</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <div>
+                            <div class="form-group">
+                                <label for="description">Item description</label>
+                                <textarea id="description" name="description" class="form-control start-form__textarea"
+                                          placeholder="Item description..."></textarea>
+                            </div>
+                            <div class="total-group">
+                                <p>Total item weight: <strong><span id="totalWeight">0</span> pounds</strong></p>
+                            </div>
+                        </div>
+                        <button href="#signUp3" class="contactButtonModal signUp3" id="submitBtn">
+                            Continue
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div id="signUp3" class="sign3-modal white-popup white-popup__step2 mfp-with-anim mfp-hide">
+    <div class="popup-main">
+        <div class="loader">
+            <div class="loader-image">
+                <img src="{% static 'images/loader.gif' %}" alt="loader">
+            </div>
+        </div>
+        <div class="popup-title">
+            <h2>The last step. <br>Start to provide</h2>
+        </div>
+        <form id="openStep3Form">
+            <div class="form-group">
+                <input id="loading_name" name="loading_name" type="text" class="form-control required"
+                       placeholder="What is your name?" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <input id="loading_email" name="loading_email" type="email" class="form-control required"
+                       placeholder="E-mail" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <input id="loading_phone" name="loading_phone" type="number" class="form-control "
+                       placeholder="Phone number" required autocomplete="off">
+            </div>
+            <button class="contactButtonModal openStepEndBtn" href="#" type="submit" id="signUpBtnFinish">Continue
+            </button>
+        </form>
+    </div>
+</div>
+
+<div id="signUp4" class="sign4-modal white-popup white-popup__stepEnd mfp-with-anim mfp-hide">
+    <div class="popup-main">
+        <div class="popup-title">
+            <h2>Load will be cost</h2>
+        </div>
+        <form id="openStepEndForm">
+            <div class="form-group">
+                <div class="last-group">
+                    <span id="totalPrice">$0</span>
+                </div>
+            </div>
+            <button href="#" class="contactButtonModal closeBtn" data-effect="mfp-zoom-in">Ok</button>
+        </form>
+    </div>
+</div>
 
 <script src="{% static "js/jquery.js" %}"></script>
-<script src="{% static "js/bootstrap/bootstrap.js" %}"></script>
 <script src="{% static "js/bootstrap/popper.min.js" %}"></script>
+<script src="{% static "js/bootstrap/bootstrap.js" %}"></script>
+<script src="{% static 'js/bootstrap/bootstrap-select.min.js' %}"></script>
 <script src="{% static "js/counter/waypoints.min.js" %}"></script>
 <script src="{% static "js/counter/jquery.counterup.min.js" %}"></script>
-<script src="{% static "js/counter/main.js" %}?v=7"></script>
+<script src="{% static "js/counter/main.js" %}?v=8"></script>
 <script src="{% static "js/burger/main.js" %}"></script>
 <script src="{% static "js/carousel/owl.carousel.min.js" %}"></script>
 <script src="{% static "js/carousel/main.js" %}"></script>
@@ -399,56 +582,87 @@
 <script src="{% static 'js/toastr/toastr.js' %}"></script>
 <script src="{% static 'js/timer/timer.min.js' %}"></script>
 <script src="{% static 'js/wow/wow.min.js' %}"></script>
+<script src="{% static 'js/google/main.js' %}"></script>
+<script src="{% static 'js/signup/main.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 <script>
 
-   // Анимация на сайте
-   new WOW().init();
+   $("#openStep3Form").submit(function (event) {
+      event.preventDefault();
 
-   $(document).ready(function () {
-      $('.openModal').magnificPopup({
-         removalDelay: 500,
-         callbacks: {
-            beforeOpen: function () {
-               this.st.mainClass = this.st.el.attr('data-effect');
-            }
-         },
-         midClick: true
-      });
+      let url = "{% url 'order:create' %}";
+      const signUpBtnFinish = document.getElementById('signUpBtnFinish');
+      const footerPhone = document.querySelector('.footer-phone');
+      let phone = footerPhone.getAttribute('data-phone');
+      signUpBtnFinish.disabled = true;
+      $('#signUp3 .loader').addClass('active');
 
-      $(".closeBtn").click(function () {
-         $.magnificPopup.close();
-         $('.contactLeftModal').show();
-         $(".contactLeftModalSuccess").prop("hidden", !this.checked);
-      });
+      let formData = new FormData();
+      formData.append("address_from", $("#addressFrom").val());
+      formData.append("address_to", $("#addressTo").val());
+      formData.append("pickup", $("#pickup").val());
 
-      $("#doneBtn").click(function () {
-         $.magnificPopup.close();
-         $('.contactLeftModal').show();
-         $(".contactLeftModalSuccess").prop("hidden", !this.checked);
-      });
-   });
-
-   if ($(window).scrollTop() === 0) {
-      $('.header').css("background-color", "transparent");
-   } else {
-      $('.header').css("background-color", "white");
-   }
-
-   $(window).scroll(function () {
-      if ($(window).scrollTop() === 0) {
-         $('.header').css({"background-color": "transparent", "transition": "background 1.0s ease"});
-      } else {
-         $('.header').css({"background-color": "white", "transition": "background 1.0s ease"});
+      for (let i = 0; i < $("#delivery option:selected").length; i++) {
+         formData.append('delivery', $("#delivery option:selected")[i].value);
       }
-   });
+      formData.append("loading_date", $("#loading_date").val());
+      formData.append("length", $("#cubL").val());
+      formData.append("width", $("#cubW").val());
+      formData.append("height", $("#cubH").val());
+      formData.append("weight", $("#weight").val());
+      formData.append("quantity", $("#quantity").val());
+      formData.append("description", $("#description").val());
+      formData.append("name", $("#loading_name").val());
+      formData.append("email", $("#loading_email").val());
+      formData.append("phone", $("#loading_phone").val());
+      formData.append("page_url", "{{request.build_absolute_uri}}");
 
-   $("#phoneModal").inputmask({
-      "mask": "+1 (ddd) ddd-dddd"
-   });
+      if ($("#pickup option:selected").val() == '' || $("#delivery option:selected").length == 0 ||
+         $("#quantity").val() == 0 || $("#cubL").val() == '' || $("#cubW").val() == '' || $("#cubH").val() == '' ||
+         $("#weight").val() == 0) {
+         $("#totalPrice").html('<p>Not enough info to generate a quote. Our dispatchers will contact you to give you the best price on the market!</p>');
+      }
 
-   $("#phone").inputmask({
-      "mask": "+1 (ddd) ddd-dddd"
+      $.ajax({
+         headers: {"X-CSRFToken": "{{csrf_token}}"},
+         url: url,
+         processData: false,
+         contentType: false,
+         method: 'POST',
+         data: formData,
+         success: function (data) {
+            signUpBtnFinish.disabled = false;
+            $('#signUp3 .loader').removeClass('active');
+            if (data.cost) {
+               $("#totalPrice").text("$" + data.cost);
+            } else {
+               $("#totalPrice").html(`<p>Our system was unavailable to determine the price for delivery. Please call us at <a href="tel:${phone}">${phone}</a> to get a quote</p>`);
+            }
+
+            setTimeout(function () {
+               $.magnificPopup.open({
+                  items: {
+                     src: '#signUp4'
+                  },
+                  type: 'inline'
+               });
+            }, 1500);
+         },
+         error: function (data) {
+            signUpBtnFinish.disabled = false;
+            $('#signUp3 .loader').removeClass('active');
+            $("#totalPrice").html(`<p>Our system was unavailable to determine the price for delivery. Please call us at <a href="tel:${phone}">${phone}</a> to get a quote</p>`);
+            setTimeout(function () {
+               $.magnificPopup.open({
+                  items: {
+                     src: '#signUp4'
+                  },
+                  type: 'inline'
+               });
+            }, 1500);
+         }
+      });
    });
 
    $("#CallBackCreateForm").submit(function (event) {
@@ -609,8 +823,10 @@
 
    });
 
-
 </script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsYaPwhG-tJgzcWeaZORq-0088PNOK9kk&callback=initAutocomplete&libraries=places&v=weekly"
+        async></script>
 </body>
 </html>
-

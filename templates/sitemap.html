@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="{% static 'js/toastr/toastr.css' %}">
     <link rel="stylesheet" href="{% static "css/animate.css" %}">
     <link rel="stylesheet" href="{% static "js/popup/magnific-popup.css" %}">
-    <link rel="stylesheet" href="{% static "css/style.css" %}?v=7">
-    <link rel="stylesheet" href="{% static "css/response.css" %}?v=7">
+    <link rel="stylesheet" href="{% static "css/style.css" %}?v=8">
+    <link rel="stylesheet" href="{% static "css/response.css" %}?v=8">
 
     <title>REDMAX - Sitemap</title>
 </head>
@@ -65,48 +65,73 @@
             <div class="row sitemap-row animate__animated animate__fadeInLeft">
                 <div class=" col-sm-4 col-md-3 col-lg-2">
                     <ul class="p-0">
-                        <li class="nav-item"><a href="{% url 'index:index' %}" class="sitemap-main-text">Home page</a>
+                        <li class="nav-item">
+                            <a href="{% url 'index:index' %}" class="sitemap-main-text">Home page</a>
                         </li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">About</a></li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Why choose us?</a></li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Statistics</a></li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Call back</a></li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'index:index' %}#section-about" class="sitemap-text">About</a>
+                        </li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'index:index' %}#section-why" class="sitemap-text">Why choose us?</a>
+                        </li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'index:index' %}#section-stat" class="sitemap-text">Statistics</a>
+                        </li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'index:index' %}#section-contact" class="sitemap-text">Call back</a>
+                        </li>
                     </ul>
                 </div>
                 <div class=" col-sm-4 col-md-3 col-lg-2">
                     <ul class="p-0">
-                        <li class="nav-item"><a href="{% url 'brokers:broker' %}" class="sitemap-main-text">Brokers</a>
+                        <li class="nav-item">
+                            <a href="{% url 'brokers:broker' %}" class="sitemap-main-text">Brokers</a>
                         </li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Services</a></li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Why choose us?</a></li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'brokers:broker' %}#section-services" class="sitemap-text">Services</a>
+                        </li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'brokers:broker' %}#section-why" class="sitemap-text">Why choose us?</a>
+                        </li>
                     </ul>
                 </div>
                 <div class=" col-sm-4 col-md-3 col-lg-2">
                     <ul class="p-0">
-                        <li class="nav-item"><a href="{% url 'shippers:shipper' %}"
-                                                class="sitemap-main-text">Shippers</a>
+                        <li class="nav-item">
+                            <a href="{% url 'shippers:shipper' %}" class="sitemap-main-text">Shippers</a>
                         </li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Services</a></li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Advantages</a></li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Questions?</a></li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Call back</a></li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'shippers:shipper' %}#section-services" class="sitemap-text">Services</a>
+                        </li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'shippers:shipper' %}#section-why" class="sitemap-text">Advantages</a>
+                        </li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'shippers:shipper' %}#section-contact" class="sitemap-text">Questions?</a>
+                        </li>
                     </ul>
                 </div>
                 <div class=" col-sm-4 col-md-3 col-lg-2">
                     <ul class="p-0">
-                        <li class="nav-item"><a href="{% url 'carriers:carrier' %}"
-                                                class="sitemap-main-text">Carriers</a>
+                        <li class="nav-item">
+                            <a href="{% url 'carriers:carrier' %}" class="sitemap-main-text">Carriers</a>
                         </li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Advantages</a></li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Mobile app</a></li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'carriers:carrier' %}#section-why" class="sitemap-text">Advantages</a>
+                        </li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'carriers:carrier' %}#section-app" class="sitemap-text">Mobile app</a>
+                        </li>
                     </ul>
                 </div>
                 <div class=" col-sm-4 col-md-3 col-lg-2">
                     <ul class="p-0">
-                        <li class="nav-item"><a href="{% url 'contact:contact' %}" class="sitemap-main-text">Contact</a>
+                        <li class="nav-item">
+                            <a href="{% url 'contact:contact' %}" class="sitemap-main-text">Contact</a>
                         </li>
-                        <li class="nav-item sitemapItem"><a href="#" class="sitemap-text">Any questions?</a></li>
-                        <li class="nav-item sitemapItem lastsiteMap"><a href="#" class="sitemap-text">Contact</a></li>
+                        <li class="nav-item sitemapItem">
+                            <a href="{% url 'contact:contact' %}" class="sitemap-text">Any questions?</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -156,54 +181,9 @@
 <script src="{% static 'js/toastr/toastr.js' %}"></script>
 <script src="{% static 'js/timer/timer.min.js' %}"></script>
 <script src="{% static 'js/wow/wow.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 
 <script>
-
-   // Анимация на сайте
-   new WOW().init();
-
-   $(document).ready(function () {
-      $('.openModal').magnificPopup({
-         removalDelay: 500,
-         callbacks: {
-            beforeOpen: function () {
-               this.st.mainClass = this.st.el.attr('data-effect');
-            }
-         },
-         midClick: true
-      });
-
-      $(".closeBtn").click(function () {
-         $.magnificPopup.close();
-         $('.contactLeftModal').show();
-         $(".contactLeftModalSuccess").prop("hidden", !this.checked);
-      });
-
-      $("#doneBtn").click(function () {
-         $.magnificPopup.close();
-         $('.contactLeftModal').show();
-         $(".contactLeftModalSuccess").prop("hidden", !this.checked);
-      });
-   });
-
-   $("#phoneModal").inputmask({
-      "mask": "+1 (ddd) ddd-dddd"
-   });
-
-   if ($(window).scrollTop() === 0) {
-      $('.header').css("background-color", "transparent");
-   } else {
-      $('.header').css("background-color", "white");
-   }
-
-   $(window).scroll(function () {
-      if ($(window).scrollTop() === 0) {
-         $('.header').css({"background-color": "transparent", "transition": "background 1.0s ease"});
-      } else {
-         $('.header').css({"background-color": "white", "transition": "background 1.0s ease"});
-      }
-   });
-
 
    $("#CallBackCreateForm").submit(function (event) {
 
@@ -256,7 +236,6 @@
          }
       });
    });
-
 
 </script>
 </body>

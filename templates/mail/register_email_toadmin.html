@@ -1,0 +1,4 @@
+<p>User <strong>{{ register.name }}</strong> left a register request</p>
+<p>register info:</p>
+<p>email: {{ register.email|default_if_none:'not filled' }}</p>
+<p>page_url: {{ register.page_url|default_if_none:'not filled' }}</p>

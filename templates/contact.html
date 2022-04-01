@@ -7,6 +7,21 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="twitter:image:src" content="https://redmax.uzdevelop.ru/static/images/banner.png">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:site" content="REDMAX LOGISTICS">
+    <meta name="twitter:title" content="For Less, and with more to offer than ever before!">
+    <meta name="twitter:description" content="Whether you need to send a single pallet across the state or truckload throughout America">
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://redmax.uzdevelop.ru/"/>
+    <meta property="og:site_name" content="REDMAX LOGISTICS"/>
+    <meta property="og:title" content="For Less, and with more to offer than ever before!"/>
+    <meta property="og:description" content="Whether you need to send a single pallet across the state or truckload throughout America"/>
+    <meta property="og:image" content="https://redmax.uzdevelop.ru/static/images/banner.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="600"/>
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;1,400&family=Open+Sans:wght@300&display=swap"
           rel="stylesheet">
     <link rel="icon" href="{% static "images/logos/favicon.svg" %}">
@@ -254,6 +269,30 @@
             timer.addEventListener("secondsUpdated", function (e) {
                $("#timer").html(timer.getTimeValues().toString().slice(4));
             });
+
+            // Проверка на звонок. Ответили или нет
+            function checkCall() {
+               let url_check = `api/v1/call_back/${data.id}/check_is_answered/`;
+               $.ajax({
+                  headers: {"X-CSRFToken": "{{csrf_token}}"},
+                  url: url_check,
+                  processData: false,
+                  contentType: false,
+                  method: 'GET',
+                  success: function (data) {
+                     if( data.is_answered){
+                         timer.stop();
+                         clearInterval(interval);
+                     }
+                  },
+                  error: function (data) {
+                     console.log(data);
+                  }
+
+               });
+            }
+
+            let interval = setInterval(checkCall, 5000);
 
          },
          error: function (data) {

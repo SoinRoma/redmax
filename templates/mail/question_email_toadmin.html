@@ -1,0 +1,9 @@
+<p>User <strong>{{ question.name }}</strong> left a question request</p>
+<p>question info:</p>
+<p>email: {{ question.email|default_if_none:'not filled' }}</p>
+<p>message: {{ question.message|default_if_none:'not filled' }}</p>
+<p>page_url: {{ question.page_url|default_if_none:'not filled' }}</p>
+
+
+
+

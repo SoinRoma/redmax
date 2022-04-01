@@ -1,0 +1,20 @@
+<p>User <strong>{{ order.name }}</strong> left a order request</p>
+<p>order info:</p>
+<p>zip from: {{ order.address_from|default_if_none:'not filled' }}</p>
+<p>zip to: {{ order.address_to|default_if_none:'not filled' }}</p>
+<p>cost: {{ order.cost|default_if_none:'not filled' }}</p>
+<p>pickup: {{ order.pickup|default_if_none:'not filled' }}</p>
+<p>delivery: {{ delivery_list }}</p>
+<p>length: {{ order.length|default_if_none:'not filled' }}</p>
+<p>width: {{ order.width|default_if_none:'not filled' }}</p>
+<p>height: {{ order.height|default_if_none:'not filled' }}</p>
+<p>weight: {{ order.weight|default_if_none:'not filled' }}</p>
+<p>quantity: {{ order.quantity|default_if_none:'not filled' }}</p>
+<p>description: {{ description|default_if_none:'not filled' }}</p>
+<p>email: {{ order.email|default_if_none:'not filled' }}</p>
+<p>phone: {{ order.phone|default_if_none:'not filled' }}</p>
+<p>loading date: {{ order.loading_date|default_if_none:'not filled' }}</p>
+<p>page url: {{ order.page_url|default_if_none:'not filled' }}</p>
+
+
+

@@ -32,7 +32,9 @@ if os.getenv('DEBUG') == 'TRUE':
 
 ALLOWED_HOSTS = ['*']
 
-
+TWILIO_ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
+TWILIO_TOKEN = os.getenv("TWILIO_TOKEN")
+TWILIO_CALLER_ID = os.getenv("TWILIO_CALLER_ID")
 # Application definition
 
 INSTALLED_APPS = [

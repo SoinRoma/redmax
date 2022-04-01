@@ -25,5 +25,6 @@ urlpatterns = [
     path('shippers/', include('shippers.urls')),
     path('sitemap/', include('sitemap.urls')),
     path('order/', include('order.urls')),
+    path('twilio/', include('twilioapp.urls')),
     path('api/', include('api.urls')),
 ]

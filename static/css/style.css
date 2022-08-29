@@ -101,6 +101,13 @@ button:focus {
     cursor: pointer;
 }
 
+.nav-button:hover {
+    text-decoration: none;
+    color: white;
+    background: #FF0000;
+    transition: 0.5s all;
+}
+
 
 #timer-block {
     font-size: 15px;
@@ -202,8 +209,10 @@ button:focus {
 }
 
 .mainButtonContactUs:hover {
-    color: #000000;
     text-decoration: none;
+    color: white;
+    background: #FF0000;
+    transition: 0.5s all;
 }
 
 
@@ -1473,6 +1482,7 @@ input:focus ~ label, input:valid ~ label {
 .pac-container {
     z-index: 99999;
 }
+
 .popup-main .last-group span#totalPrice p {
     font-size: 17px;
     padding: 0 16px;
@@ -1480,7 +1490,7 @@ input:focus ~ label, input:valid ~ label {
     text-align: center;
 }
 
-.popup-main .last-group span#totalPrice  {
+.popup-main .last-group span#totalPrice {
     font-size: 17px;
     padding: 0 16px;
     margin-top: 15px;
@@ -1521,4 +1531,10 @@ input:focus ~ label, input:valid ~ label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+}
+
+.service-btn:hover {
+    color: white;
+    background: #FF0000;
+    transition: 0.5s all;
 }

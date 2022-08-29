@@ -7,18 +7,18 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="twitter:image:src" content="https://redmax.uzdevelop.ru/static/images/banner.png">
+    <meta name="twitter:image:src" content="https://redmaxllc.com/static/images/banner.png">
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:site" content="REDMAX LOGISTICS">
     <meta name="twitter:title" content="For Less, and with more to offer than ever before!">
     <meta name="twitter:description" content="Whether you need to send a single pallet across the state or truckload throughout America">
 
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://redmax.uzdevelop.ru/"/>
+    <meta property="og:url" content="https://redmaxllc.com/"/>
     <meta property="og:site_name" content="REDMAX LOGISTICS"/>
     <meta property="og:title" content="For Less, and with more to offer than ever before!"/>
     <meta property="og:description" content="Whether you need to send a single pallet across the state or truckload throughout America"/>
-    <meta property="og:image" content="https://redmax.uzdevelop.ru/static/images/banner.png"/>
+    <meta property="og:image" content="https://redmaxllc.com/static/images/banner.png"/>
     <meta property="og:image:width" content="1200"/>
     <meta property="og:image:height" content="600"/>
 
@@ -29,8 +29,8 @@
     <link rel="stylesheet" href="{% static 'js/toastr/toastr.css' %}">
     <link rel="stylesheet" href="{% static "css/animate.css" %}">
     <link rel="stylesheet" href="{% static "js/popup/magnific-popup.css" %}">
-    <link rel="stylesheet" href="{% static "css/style.css" %}?v=8">
-    <link rel="stylesheet" href="{% static "css/response.css" %}?v=8">
+    <link rel="stylesheet" href="{% static "css/style.css" %}?v=10">
+    <link rel="stylesheet" href="{% static "css/response.css" %}?v=10">
 
     <title>REDMAX - Contact</title>
 </head>
@@ -128,7 +128,7 @@
             <img src="{% static "images/logos/logo.svg" %}" alt="logo">
             <p class="footer-license">
                 Redmax Logistics, LLC,
-                © All rights reserved, Last Modified 2022
+                © All rights reserved, Last Modified {% now "Y" %}
             </p>
             <p class="powered">
                 Powered by:
@@ -163,7 +163,7 @@
                     {{ contact.phone }}
                 </a>
                 <p class="footer-address">
-                    305 Olive Ave B Holland PA 19044
+                    {{ contact.address }}
                 </p>
             </div>
             <div class="footer-social">
@@ -176,7 +176,7 @@
             </div>
             <p class="footer-license2">
                 Redmax Logistics, LLC,
-                © All rights reserved, Last Modified 2022
+                © All rights reserved, Last Modified {% now "Y" %}
             </p>
             <p class="powered2">
                 Powered by:

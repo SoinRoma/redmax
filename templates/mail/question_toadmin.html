@@ -1,0 +1,4 @@
+<p>User <strong>{{ contact_us.name }}</strong> left a request of contact us</p>
+<p>request info:</p>
+<p>phone: {{ contact_us.phone|default_if_none:'not filled' }}</p>
+<p>message: {{ contact_us.question|default_if_none:'not filled' }}</p>

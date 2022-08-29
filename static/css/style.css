@@ -121,7 +121,7 @@ button:focus {
 
 .main {
     height: 100vh;
-    background: url("../images/backgrounds/mainBg.png") no-repeat;
+    background: url("../images/backgrounds/mainBg.webp") no-repeat;
     background-size: cover;
     background-position: bottom;
 }
@@ -441,7 +441,7 @@ button:focus {
 
 .stat {
     margin-top: 150px;
-    background: url("../images/backgrounds/statBg.png") no-repeat;
+    background: url("../images/backgrounds/statBg.webp") no-repeat;
     background-size: cover;
     background-position: center center;
     position: relative;
@@ -746,7 +746,7 @@ input:focus ~ label, input:valid ~ label {
 /*----------BROKERS--------*/
 
 .brokers {
-    background: url("../images/backgrounds/brokerBg.png") no-repeat;
+    background: url("../images/backgrounds/brokerBg.webp") no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -840,7 +840,7 @@ input:focus ~ label, input:valid ~ label {
 
 .shippers {
     height: 100vh;
-    background: url("../images/backgrounds/shippersBg.png") no-repeat;
+    background: url("../images/backgrounds/shippersBg.webp") no-repeat;
     background-size: cover;
     background-position: bottom;
 }
@@ -908,7 +908,7 @@ input:focus ~ label, input:valid ~ label {
 
 .carriers {
     height: 100vh;
-    background: url("../images/backgrounds/carriersBg.png") no-repeat;
+    background: url("../images/backgrounds/carriersBg.webp") no-repeat;
     background-size: cover;
     background-position: bottom;
 }
@@ -982,7 +982,7 @@ input:focus ~ label, input:valid ~ label {
 /*------------SITEMAP-----------*/
 
 .sitemap {
-    background: url("../images/backgrounds/sitemapBg.png") no-repeat;
+    background: url("../images/backgrounds/sitemapBg.webp") no-repeat;
     background-size: cover;
     background-position: bottom;
 }

@@ -112,7 +112,7 @@
 
     .main {
         height: 100vh;
-        background: url("../images/backgrounds/mainBg2.png") no-repeat;
+        background: url("../images/backgrounds/mainBg2.webp") no-repeat;
         background-size: cover;
         background-position: bottom;
     }
@@ -432,7 +432,7 @@
     }
 
     .sitemap {
-        background: url("../images/backgrounds/sitemapBg.png") no-repeat;
+        background: url("../images/backgrounds/sitemapBg.webp") no-repeat;
         background-size: cover;
         background-position: bottom;
         height: 100%;
@@ -503,14 +503,14 @@
     }
 
     .shippers {
-        background: url(../images/backgrounds/shippersBg2.png) no-repeat;
+        background: url(../images/backgrounds/shippersBg2.webp) no-repeat;
         background-size: cover;
         background-position: top center;
         height: 75vh;
     }
 
     .brokers {
-        background: url(../images/backgrounds/brokersBg2.png) no-repeat;
+        background: url(../images/backgrounds/brokersBg2.webp) no-repeat;
         background-size: cover;
         background-position: center center;
         height: 75vh;

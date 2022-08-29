@@ -12,6 +12,9 @@ from django.utils.html import strip_tags
 
 
 # Create your models here.
+from order.email_service import send_feedback_mail
+
+
 class PickupService(models.Model):
     name = models.CharField(max_length=255)
     created = models.DateTimeField(auto_now_add=True)
@@ -83,7 +86,7 @@ class Receiver(models.Model):
 @receiver(m2m_changed, sender=Order.delivery.through)
 def cost_email(sender, instance, action, **kwargs):
     if action == "post_add":
-        sender = 'contact@cnulogistics.com'
+        email_sender = 'contact@redmaxllc.com'
         subject = 'REDMAX delivery quote'
 
 
@@ -111,19 +114,19 @@ def cost_email(sender, instance, action, **kwargs):
             print("error:", e)
 
         # -------------------------client send (without page_url)
-        context = {
-            'name': instance.name,
-            'cost': instance.cost
-
-        }
-        html_message = render_to_string('mail/cost_email.html', context)
-        plain_message = strip_tags(html_message)
-        send_mail(subject=subject,
-                  message=plain_message,
-                  html_message=html_message,
-                  from_email=sender,
-                  recipient_list=[instance.email],
-                  fail_silently=False)
+        # context = {
+        #     'name': instance.name,
+        #     'cost': instance.cost
+        #
+        # }
+        # html_message = render_to_string('mail/cost_email.html', context)
+        # plain_message = strip_tags(html_message)
+        # send_mail(subject=subject,
+        #           message=plain_message,
+        #           html_message=html_message,
+        #           from_email=email_sender,
+        #           recipient_list=[instance.email],
+        #           fail_silently=False)
 
         # ------------------------- admin send (with page_url)
 
@@ -132,13 +135,4 @@ def cost_email(sender, instance, action, **kwargs):
             'delivery_list': instance.get_delivery_list_string(),
             'description': instance.description
         }
-        html_message = render_to_string('mail/cost_email_toadmin.html', context)
-        plain_message = strip_tags(html_message)
-
-        for mail_receiver in Receiver.objects.all():
-            send_mail(subject=subject,
-                      message=plain_message,
-                      html_message=html_message,
-                      from_email=sender,
-                      recipient_list=[mail_receiver.email],
-                      fail_silently=False)
+        send_feedback_mail(Receiver.objects.all(), context, "mail/cost_email_toadmin.html")
